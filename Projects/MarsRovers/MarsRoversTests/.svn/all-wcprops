@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/MarsRovers/!svn/ver/5/MarsRoversTests
+END
+CommandTestHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/MarsRovers/!svn/ver/9/MarsRoversTests/CommandTestHelper.cs
+END
+CommandTests.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/MarsRovers/!svn/ver/9/MarsRoversTests/CommandTests.cs
+END
+MarsRoversTests.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/MarsRovers/!svn/ver/9/MarsRoversTests/MarsRoversTests.csproj
+END
+NasaMissionTests.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/MarsRovers/!svn/ver/9/MarsRoversTests/NasaMissionTests.cs
+END
+MissionControllerTests.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/MarsRovers/!svn/ver/9/MarsRoversTests/MissionControllerTests.cs
+END

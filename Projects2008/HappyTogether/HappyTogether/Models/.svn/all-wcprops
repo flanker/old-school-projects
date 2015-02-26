@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/flanker/!svn/ver/6/HappyTogether/HappyTogether/Models
+END
+HappyTogether.dbml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/HappyTogether.dbml
+END
+Together.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/Together.cs
+END
+TogetherFormViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/flanker/!svn/ver/6/HappyTogether/HappyTogether/Models/TogetherFormViewModel.cs
+END
+TogetherRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/flanker/!svn/ver/6/HappyTogether/HappyTogether/Models/TogetherRepository.cs
+END
+HappyTogether.designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/HappyTogether.designer.cs
+END
+Post.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/Post.cs
+END
+Enums.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/flanker/!svn/ver/6/HappyTogether/HappyTogether/Models/Enums.cs
+END
+HappyTogether.dbml.layout
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/HappyTogether.dbml.layout
+END
+Attendee.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Models/Attendee.cs
+END

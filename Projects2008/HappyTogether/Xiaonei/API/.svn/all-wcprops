@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API
+END
+XmlResponseParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/XmlResponseParser.cs
+END
+IResponseParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/IResponseParser.cs
+END
+ResponseFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/ResponseFormat.cs
+END
+APIClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/APIClient.cs
+END
+APIException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/APIException.cs
+END
+APIMethod.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/flanker/!svn/ver/2/HappyTogether/Xiaonei/API/APIMethod.cs
+END

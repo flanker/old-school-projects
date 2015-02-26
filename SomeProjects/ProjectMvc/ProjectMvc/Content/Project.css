@@ -1,0 +1,23 @@
+﻿.project-entry
+{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: -1px;
+    padding: 5px 20px;
+}
+.project-entry:hover
+{
+    background-color: #EEEEEE;
+}
+.project-entry-title
+{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+.project-entry-date
+{
+}
+.project-entry-description
+{
+    padding: 20px 0px;
+}

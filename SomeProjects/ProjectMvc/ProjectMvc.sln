@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMvc", "ProjectMvc\ProjectMvc.csproj", "{38DBE5C4-9CE1-45F5-9FE4-657768B09F02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMvc.Test", "ProjectMvc.Test\ProjectMvc.Test.csproj", "{518F6DED-140E-4520-A3AA-AA9DCF4A1A60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38DBE5C4-9CE1-45F5-9FE4-657768B09F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DBE5C4-9CE1-45F5-9FE4-657768B09F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DBE5C4-9CE1-45F5-9FE4-657768B09F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DBE5C4-9CE1-45F5-9FE4-657768B09F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518F6DED-140E-4520-A3AA-AA9DCF4A1A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518F6DED-140E-4520-A3AA-AA9DCF4A1A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518F6DED-140E-4520-A3AA-AA9DCF4A1A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518F6DED-140E-4520-A3AA-AA9DCF4A1A60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

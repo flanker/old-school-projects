@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="ProjectManagement" basedi="." default="buildAll">
+    
+    <property name="folder.dotNetFramework4" value="C:\Windows\Microsoft.NET\Framework\v4.0.30319" />
+    <property name="folder.developmentBase" value="${project::get-base-directory()}" />
+    <property name="build.configuration" value="/nologo /t:clean;rebuild /p:Configuration=Debug /verbosity:quiet" />
+    
+    <target name="buildAll"
+        description="Build both ProjectXAF and ProjectMVC projects."
+        depends="buildXAF, buildMVC, runUnitTests"
+    />
+    
+    <target name="buildXAF">
+        <exec 
+            program="${folder.dotNetFramework4}/msbuild.exe"
+            workingdir="${folder.developmentBase}"
+            commandline="${folder.developmentBase}/ProjectXAF/ProjectXAF.sln ${build.configuration}"
+            append="true"
+            verbose="true"
+        />
+    </target>
+    
+    <target name="buildMVC">
+        <exec 
+            program="${folder.dotNetFramework4}/msbuild.exe"
+            workingdir="${folder.developmentBase}"
+            commandline="${folder.developmentBase}/ProjectMvc/ProjectMvc.sln ${build.configuration}"
+            append="true"
+            verbose="true"
+        />
+    </target>
+    
+    <target name="runUnitTests" depends="buildMVC">
+        <exec program="${folder.developmentBase}/nunit/nunit-console.exe">
+            <arg value="${folder.developmentBase}/ProjectMvc/ProjectMvc.Test/bin/Debug/ProjectMvc.Test.dll" />
+            <arg value="/nologo" />
+        </exec>
+    </target>
+</project>

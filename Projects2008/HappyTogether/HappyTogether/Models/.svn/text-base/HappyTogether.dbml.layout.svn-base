@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HappyTogether">
+  <DataContextMoniker Name="/HappyTogetherDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c624923e-2678-4c58-b5c0-29c76b6fffa1" absoluteBounds="0.75, 1.25, 2, 3.6727624511718746">
+      <DataClassMoniker Name="/HappyTogetherDataContext/Together" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90c26084-a0e3-45fc-b718-6fa83b3a786e" absoluteBounds="0.765, 1.71, 1.9700000000000002, 3.112762451171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87495872-3cdc-4bb6-bcc5-ee8f3271059e" absoluteBounds="3.5, 1, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/HappyTogetherDataContext/Attendee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc37f92d-089b-4e91-a695-58dccde7acf6" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac0ca5d4-cd87-4ab8-860d-2de8df421d54" absoluteBounds="3.5, 3.625, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/HappyTogetherDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e86981d3-cd32-4193-a954-cb62b4138ef8" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.00628275553385); (3.5 : 2.00628275553385)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HappyTogetherDataContext/Together/Together_Attendee" />
+      <nodes>
+        <classShapeMoniker Id="c624923e-2678-4c58-b5c0-29c76b6fffa1" />
+        <classShapeMoniker Id="87495872-3cdc-4bb6-bcc5-ee8f3271059e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.27388122558594); (3.5 : 4.27388122558594)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HappyTogetherDataContext/Together/Together_Post" />
+      <nodes>
+        <classShapeMoniker Id="c624923e-2678-4c58-b5c0-29c76b6fffa1" />
+        <classShapeMoniker Id="ac0ca5d4-cd87-4ab8-860d-2de8df421d54" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

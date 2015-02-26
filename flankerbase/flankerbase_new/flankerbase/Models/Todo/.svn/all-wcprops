@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Models/Todo
+END
+TodoDTO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Models/Todo/TodoDTO.cs
+END
+Todo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Models/Todo/Todo.cs
+END
+TodoRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Models/Todo/TodoRepository.cs
+END

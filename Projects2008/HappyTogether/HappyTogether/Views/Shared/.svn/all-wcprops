@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/flanker/!svn/ver/7/HappyTogether/HappyTogether/Views/Shared
+END
+Error.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Views/Shared/Error.aspx
+END
+Error2.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/flanker/!svn/ver/4/HappyTogether/HappyTogether/Views/Shared/Error2.aspx
+END
+LogOnUserControl.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/flanker/!svn/ver/2/HappyTogether/HappyTogether/Views/Shared/LogOnUserControl.ascx
+END
+Site.Master
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/flanker/!svn/ver/7/HappyTogether/HappyTogether/Views/Shared/Site.Master
+END

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<kaogu_0730.Module.Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Project</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Identify
+        </th>
+        <th>
+            Start
+        </th>
+        <th>
+            End
+        </th>
+        <th>
+            Note
+        </th>
+        <th>
+            Oid
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Oid }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Oid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Oid })
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Identify
+            </td>
+            <td>
+                @String.Format("{0:g}", item.Start)
+            </td>
+            <td>
+                @String.Format("{0:g}", item.End)
+            </td>
+            <td>
+                @item.Note
+            </td>
+            <td>
+                @item.Oid
+            </td>
+        </tr>
+    }
+</table>

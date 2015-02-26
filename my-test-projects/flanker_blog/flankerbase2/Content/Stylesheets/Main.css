@@ -1,0 +1,241 @@
+﻿/*html, body, h1, h2, h3, h4, h5, ul, li, ol, blockquote, p
+{
+	margin: 0;
+	padding: 0;
+}
+*/
+html, body, h1, h2, h3, h4, h5, blockquote, p
+{
+	margin: 0;
+	padding: 0;
+}
+html
+{
+	background: #FFFFFF url(../images/bg.jpg) repeat scroll center top;
+}
+body
+{
+	color: #1A1A1A;
+	font-family: Arial, sans, Sans-Serif;
+}
+a
+{
+	color: #1A1A1A;
+	text-decoration: none;
+}
+a:focus
+{
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: medium;
+}
+img
+{
+	border: none;
+}
+ul
+{
+	margin: 0;
+	padding-left: 20px;
+}
+label
+{
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+}
+label.inline
+{
+	display: inline;
+}
+input[type="text"], input[type="password"], textarea
+{
+	width: 400px;
+	font-size: 14px;
+	padding: 5px;
+	font-family: Arial, sans, Sans-Serif;
+}
+.inputFocus
+{
+	border: 2px solid #6694E3;
+}
+.error
+{
+	color: Red;
+}
+.field-validation-error
+{
+	color: #ff0000;
+}
+.input-validation-error
+{
+	border: 1px solid #ff0000 !important;
+	background-color: #ffeeee;
+}
+.validation-summary-errors
+{
+	/*font-weight: bold;*/
+	color: #ff0000;
+}
+/* nice-button */
+.buttonSubmit, .buttonSubmitHovered
+{
+	width: auto;
+	height: 26px;
+	color: #FFF;
+	font-weight: bold;
+	padding: 2px;
+	background: url(../images/niceform/button_bg.gif) repeat-x left top;
+	cursor: pointer;
+	border: none;
+}
+
+.buttonSubmitHovered
+{
+	background-position: left bottom;
+}
+
+.buttonImg
+{
+	vertical-align: bottom;
+}
+/* page */
+.page
+{
+	margin: 0 auto;
+	width: 640px;
+}
+/* begin: #header */
+#header
+{
+	float: left;
+	margin: 50px 0 20px;
+	width: 640px;
+}
+#changeLang
+{
+	font-size: 12px;
+}
+#changeLang a
+{
+	width: 23px;
+	height: 16px;
+	display: inline-block;
+}
+#changeLang .en
+{
+	background: transparent url(../images/us.gif) no-repeat center top;
+}
+#changeLang .en:hover
+{
+	background-position: bottom;
+}
+#changeLang .zh
+{
+	background: transparent url(../images/cn.gif) no-repeat center top;
+}
+#changeLang .zh:hover
+{
+	background-position: bottom;
+}
+#changeLang a span
+{
+	display: none;
+}
+#title
+{
+	float: left;
+	padding: 10px 0;
+	font-size: 36px;
+}
+#logindisplay
+{
+	padding-top: 10px;
+	float: right;
+}
+#menu
+{
+	clear: both;
+	list-style-type: none;
+	padding: 20px 0;
+}
+#menu li
+{
+	float: left;
+	padding-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+/* end: #header */
+/* begin: #main */
+#main
+{
+	clear: both;
+}
+#blogs
+{
+}
+.blog-entry
+{
+	margin-bottom: 30px;
+}
+.blog-entry-title
+{
+	font-size: 24px;
+	font-weight: bold;
+}
+.blog-entry-createdat
+{
+	float: left;
+	font-size: 20px;
+	line-height: 30px;
+}
+.blog-entry-tools
+{
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+}
+.blog-entry-content-wrap
+{
+	clear: both;
+	padding-bottom: 24px;
+	background: transparent url(../images/landscape-shadow.png) no-repeat scroll center bottom;
+}
+.blog-entry-content
+{
+	background-color: #FFFFFF;
+	border: 1px solid #85878C;
+	padding: 12px;
+	font-size: 14px;
+	line-height: 22px;
+	text-indent: 2em;
+}
+
+.content-box-wrap
+{
+	clear: both;
+	padding-bottom: 24px;
+	background: transparent url(../images/landscape-shadow.png) no-repeat scroll center bottom;
+}
+.content-box
+{
+	background-color: #FFFFFF;
+	border: 1px solid #85878C;
+	padding: 20px;
+	font-size: 14px;
+	line-height: 22px;
+}
+.content-box p
+{
+	margin: 20px 0;
+}
+/* end: #main */
+/* begin: #footer */
+#footer
+{
+	margin: 50px auto 30px;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* end: #footer */

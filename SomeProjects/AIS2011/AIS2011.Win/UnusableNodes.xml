@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="WorkerDiary_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DiaryRecord" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PDepartment_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Project" LookupDropDownWindowWidth="847" LookupDropDownWindowHeight="233" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

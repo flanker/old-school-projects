@@ -1,0 +1,153 @@
+<html>
+<head>
+    <title>China History Timeline</title>
+    <link rel='stylesheet' href='styles.css' type='text/css' />
+
+    <!-- ############################################################################ -->
+    <!-- To use this file on your own system, replace ../../api/timeline-api.js with  -->
+    <!--     http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js          -->
+    <!-- (Where 2.3.0 is the current release number.)                                 -->
+    <script src="api/timeline-api.js?bundle=true" type="text/javascript"></script>
+	<script src="ajax/api/simile-ajax-api.js?bundle=true" type="text/javascript"></script>
+	
+    <script src="examples.js" type="text/javascript"></script>
+    <script>
+        var tl;
+        function onLoad() {
+            var eventSourcechaodai = new Timeline.DefaultEventSource(0);
+            var eventSourceBigEvent = new Timeline.DefaultEventSource(0);
+            
+            var theme = Timeline.ClassicTheme.create();
+            theme.event.bubble.width = 320;
+            theme.ether.backgroundColors = [
+                "#D1CECA",
+                "#E7DFD6",
+                "#E8E8F4",
+                "#D0D0E8"
+            ];
+            
+            var zones = [
+                {   start:    "2100 BC",
+                    end:      "2100",
+                    magnify:  16,
+                    unit:     Timeline.DateTime.CENTURY
+                }
+            ];
+            var zones2 = [
+                {   start:    "2100 BC",
+                    end:      "2100",
+                    magnify:  5,
+                    unit:     Timeline.DateTime.MILLENNIUM
+                }
+            ];
+            
+            var d = Timeline.DateTime.parseGregorianDateTime("0");
+            var bandInfos = [
+                Timeline.createHotZoneBandInfo({
+                    width:          "12%", 
+                    intervalUnit:   Timeline.DateTime.MILLENNIUM, 
+                    intervalPixels: 70,
+                    zones:          zones2,
+                    eventSource:    eventSourcechaodai,
+                    date:           d,
+                    overview:       true,
+                    theme:          theme
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "20%",
+                    intervalUnit:   Timeline.DateTime.MILLENNIUM, 
+                    intervalPixels: 250,
+                    zones:          zones,
+                    eventSource:    eventSourcechaodai,
+                    date:           d,
+                    timeZone:       -6,
+                    theme:          theme
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "56%", 
+                    intervalUnit:   Timeline.DateTime.MILLENNIUM, 
+                    intervalPixels: 250,
+                    zones:          zones,
+                    eventSource:    eventSourceBigEvent,
+                    date:           d,
+                    timeZone:       -6,
+                    theme:          theme
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "12%", 
+                    intervalUnit:   Timeline.DateTime.MILLENNIUM, 
+                    intervalPixels: 70,
+                    zones:          zones2,
+                    eventSource:    eventSourceBigEvent,
+                    date:           d,
+                    overview:       true,
+                    theme:          theme
+                })
+            ];
+            bandInfos[0].syncWith = 1;
+            bandInfos[0].highlight = true;
+            
+            bandInfos[2].syncWith = 1;
+            bandInfos[3].syncWith = 2;
+            bandInfos[3].highlight = true;
+            
+            tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
+            tl.loadXML("chaodai.xml", function(xml, url) {
+                eventSourcechaodai.loadXML(xml, url);
+                document.getElementById("chaodai-event-count").innerHTML = eventSourcechaodai.getCount();
+            });
+            tl.loadXML("BigEvent.xml", function(xml, url) {
+                eventSourceBigEvent.loadXML(xml, url);
+                document.getElementById("BigEvent-event-count").innerHTML = eventSourceBigEvent.getCount();
+            });
+            
+            setupFilterHighlightControls(document.getElementById("chaodai-controls"), tl, [0,1], theme);
+            setupFilterHighlightControls(document.getElementById("BigEvent-controls"), tl, [2,3], theme);
+        }
+        function centerTimeline(year) {
+            tl.getBand(0).setCenterVisibleDate(new Date(year, 0, 1));
+        }
+        
+        var resizeTimerID = null;
+        function onResize() {
+            if (resizeTimerID == null) {
+                resizeTimerID = window.setTimeout(function() {
+                    resizeTimerID = null;
+                    tl.layout();
+                }, 500);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad();" onresize="onResize();">
+
+
+	<div id="body">
+		<h1>China History Timelines: ChaoDai(Empire) + BigEvent</h1>
+    
+     
+	<div style="width: 100%">
+        <table style="text-align: center; width: 100%">
+            <tr>
+                <td><a href="javascript:centerTimeline(-2000);">2000 BC</a></td>
+                <td><a href="javascript:centerTimeline(-1000);">1000 BC</a></td>
+				<td><a href="javascript:centerTimeline(-500);">500 BC</a></td>
+                <td><a href="javascript:centerTimeline(-1);">1 BC</a></td>
+                <td><a href="javascript:centerTimeline(500);">500 AD</a></td>
+                <td><a href="javascript:centerTimeline(1000);">1000 AD</a></td>
+                <td><a href="javascript:centerTimeline(1500);">1500 AD</a></td>
+                <td><a href="javascript:centerTimeline(1900);">1900 AD</a></td>
+
+            </tr>
+        </table>
+    </div>
+ 
+    <div class="controls" id="chaodai-controls">
+    </div>
+    <div id="tl" class="timeline-default" style="height: 600px">
+    </div>
+    <div class="controls" id="BigEvent-controls">
+    </div>
+</div>
+</body>
+</html>

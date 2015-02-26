@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Together" Class="HappyTogetherDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=Together;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TogetherConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Together" Member="Together">
+    <Type Name="Together">
+      <Column Name="TogetherID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HostedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TinyURL" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TogetherType" Type="global::HappyTogether.Models.TogetherTypeEnum" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FeeType" Type="global::HappyTogether.Models.FeeTypeEnum" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fee" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ContactPhone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Longitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PicURL" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="Together_Attendee" Member="Attendees" ThisKey="TogetherID" OtherKey="TogetherID" Type="Attendee" />
+      <Association Name="Together_Post" Member="Posts" ThisKey="TogetherID" OtherKey="TogetherID" Type="Post" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Attendee" Member="Attendee">
+    <Type Name="Attendee">
+      <Column Name="AttendeeID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TogetherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AttendeeBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TinyURL" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="Together_Attendee" Member="Together" ThisKey="TogetherID" OtherKey="TogetherID" Type="Together" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Post" Member="Post">
+    <Type Name="Post">
+      <Column Name="PostID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PostBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TinyURL" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PostContent" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TogetherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Together_Post" Member="Together" ThisKey="TogetherID" OtherKey="TogetherID" Type="Together" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.NearestTogether" Method="NearestTogether" IsComposable="true">
+    <Parameter Name="lat" Type="System.Single" DbType="Real" />
+    <Parameter Name="long" Type="System.Single" DbType="Real" />
+    <ElementType Name="NearestTogether_个结果">
+      <Column Name="TogetherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DistanceBetween" Method="DistanceBetween" IsComposable="true">
+    <Parameter Name="Lat1" Parameter="lat1" Type="System.Single" DbType="Real" />
+    <Parameter Name="Long1" Parameter="long1" Type="System.Single" DbType="Real" />
+    <Parameter Name="Lat2" Parameter="lat2" Type="System.Single" DbType="Real" />
+    <Parameter Name="Long2" Parameter="long2" Type="System.Single" DbType="Real" />
+    <Return Type="System.Single" />
+  </Function>
+</Database>

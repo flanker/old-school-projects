@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="UserName" Caption="用户名" />
+        <Member Name="Password" Caption="密码" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="登陆">
+      <Items>
+        <StaticText Id="LogonText" Text="欢迎！ 请输入您的用户名和密码。" />
+      </Items>
+    </DetailView>
+    <ListView Id="DigFeatureTomb_ListView" MasterDetailMode="ListViewAndDetailView" />
+  </Views>
+</Application>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application>
+	<Localization>
+		<LocalizationGroup Name="DialogButtons">
+			<LocalizationItem Name="Abort" Value="关于" />
+			<LocalizationItem Name="Add" Value="加" />
+		</LocalizationGroup>
+	</Localization>
+	<SchemaModules>
+		<SchemaModule Name="DevExpress.ExpressApp.SystemModule.AutoFilterRowListViewController" Version="9.3.2.0" IsNewNode="True" />
+		<SchemaModule Name="DevExpress.ExpressApp.SystemModule.HideActionsViewController" Version="9.3.2.0" IsNewNode="True" />
+		<SchemaModule Name="DevExpress.ExpressApp.SystemModule.ShowNavigationItemController" Version="9.3.2.0" />
+		<SchemaModule Name="SystemAspNetModule" Version="9.3.2.0" IsNewNode="True" />
+		<SchemaModule Name="SystemModule" Version="9.3.2.0" IsNewNode="True" />
+		<SchemaModule Name="ValidationModule" Version="9.3.2.0" IsNewNode="True" />
+	</SchemaModules>
+</Application>

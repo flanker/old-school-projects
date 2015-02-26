@@ -1,0 +1,11 @@
+@import url("stylesbase.css");
+
+.footnotes {
+    background: #eee;
+    padding: 0.25em;
+}
+
+.controls {
+    margin: 1em 0;
+    padding: 0.5em;
+}

@@ -1,0 +1,16 @@
+﻿body
+{
+	background: #000000 url(/Content/Game/bg.jpg);
+}
+/* index --------------------------------------------*/
+#main
+{
+	width: 480px;
+	margin: 20px auto;
+	position: relative;
+}
+#gameName span
+{
+	display: block;
+	margin-top: 3px;
+}

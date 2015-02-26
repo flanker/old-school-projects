@@ -1,0 +1,77 @@
+﻿body
+{
+	background: #1A1B1F url(/Content/Life/bg.gif) no-repeat fixed left top;
+}
+#main
+{
+	width: 600px;
+	margin: 20px auto;
+	color: #666666;
+	font-size: 120%;
+}
+#main a
+{
+	color: #666666;
+}
+#main a:hover
+{
+	color: #33CCCC;
+}
+#loading
+{
+	text-align: center;
+	color: #33CCCC;
+}
+#twitter-logo
+{
+	float: left;
+}
+a#twitter-link
+{
+	margin-top: 20px;
+	padding-right: 10px;
+	display: block;
+	text-align: right;
+	font-family: georgia;
+	float: right;
+	color: #33CCCC;
+}
+#twitter_div
+{
+	clear: both;
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin-top: 5px;
+	-moz-border-radius: 10px;
+}
+#twitter_update_list
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#twitter_update_list li:first-child
+{
+	border-top: 1px dashed #888888;
+}
+#twitter_update_list li
+{
+	border-bottom: 1px dashed #888888;
+	padding: 10px;
+	line-height: 1.5em;
+}
+#twitter_update_list li:hover
+{
+	background-color: #eeeeee;
+}
+#twitter_update_list li span
+{
+	display: block;
+}
+#twitter_update_list li > a
+{
+
+	font-style: italic;
+	font-family: georgia;
+}
+

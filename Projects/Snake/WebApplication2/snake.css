@@ -1,0 +1,119 @@
+﻿html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -180px;
+	margin-left: -151px;
+	z-index: 1;
+}
+
+.stat {
+	padding: 5px;
+}
+
+.stat-title {
+	color: #999999;
+	font-weight: bold;
+}
+
+#stats {
+	position: relative;
+	line-height: 1em;
+	background-color: #DDDDDD;
+}
+
+#score {
+	color: red;
+}
+
+#time-p {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#time {
+	color: green;
+}
+
+#high-score-p {
+	position: relative;
+	text-align: center;
+	padding: 2px;
+	font-size: 0.8em;
+	color: #999999;
+	background-color: #FFFFCC;
+}
+
+#reset-high-score {
+	color: #CCCCCC;
+	position: absolute;
+	top: 2px;
+	right: 5px;
+}
+
+#snake {
+	clear: both;
+	border: solid 1px#DDDDDD;
+}
+
+#snake table {
+	border-collapse: collapse;
+}
+
+#snake td {
+	width: 20px;
+	height: 20px;
+	background-color: #EEEEEE;
+}
+
+#snake td.snake-segment {
+	background-color: green;
+}
+
+#snake td.apple {
+	background-color: red;
+}
+
+#snake td.dead {
+	background-color: #666666;
+}
+
+#header {
+	width: 500px;
+	padding: 5px 0;
+	margin: 0 auto;
+	font-size: 0.8em;
+	list-style: none;
+}
+
+.header-title {
+	font-weight: bold;
+}
+
+#key-snake-segment {
+	color: green;
+}
+
+#key-apple {
+	color: red;
+}

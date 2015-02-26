@@ -1,0 +1,24 @@
+﻿@model IEnumerable<World_TimeSpace.Module.WorldCulture>
+   
+
+
+@{
+    ViewBag.Title = "WCulture";
+}
+
+<h2>WCulture</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <div>
+        @item.Id |
+        
+        @item.StartOn.Name - @item.EndOn.Name
+        
+        | @item.Name
+
+        | @item.BelongRegion.Name
+        </div>
+    </div>
+}

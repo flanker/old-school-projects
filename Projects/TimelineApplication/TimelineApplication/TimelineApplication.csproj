@@ -1,0 +1,158 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F482EA4-156A-4B4C-B8BE-46D8C2B82B23}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimelineApplication</RootNamespace>
+    <AssemblyName>TimelineApplication</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="index.js" />
+    <Content Include="local_data.js" />
+    <Content Include="timeline\timeline_ajax\content\history.html" />
+    <Content Include="timeline\timeline_ajax\images\bubble-arrow-point-down.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-arrow-point-left.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-arrow-point-right.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-arrow-point-up.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-bottom-left.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-bottom-right.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-bottom.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-left.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-right.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-top-left.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-top-right.png" />
+    <Content Include="timeline\timeline_ajax\images\bubble-top.png" />
+    <Content Include="timeline\timeline_ajax\images\close-button.png" />
+    <Content Include="timeline\timeline_ajax\images\copy.png" />
+    <Content Include="timeline\timeline_ajax\images\message-bottom-left.png" />
+    <Content Include="timeline\timeline_ajax\images\message-bottom-right.png" />
+    <Content Include="timeline\timeline_ajax\images\message-left.png" />
+    <Content Include="timeline\timeline_ajax\images\message-right.png" />
+    <Content Include="timeline\timeline_ajax\images\message-top-left.png" />
+    <Content Include="timeline\timeline_ajax\images\message-top-right.png" />
+    <Content Include="timeline\timeline_ajax\scripts\signal.js" />
+    <Content Include="timeline\timeline_ajax\simile-ajax-api.js" />
+    <Content Include="timeline\timeline_ajax\simile-ajax-bundle.js" />
+    <Content Include="timeline\timeline_ajax\styles\graphics-ie6.css" />
+    <Content Include="timeline\timeline_ajax\styles\graphics.css" />
+    <Content Include="timeline\timeline_js\images\blue-circle.png" />
+    <Content Include="timeline\timeline_js\images\bubble-bottom-arrow.png" />
+    <Content Include="timeline\timeline_js\images\bubble-bottom-left.png" />
+    <Content Include="timeline\timeline_js\images\bubble-bottom-right.png" />
+    <Content Include="timeline\timeline_js\images\bubble-bottom.png" />
+    <Content Include="timeline\timeline_js\images\bubble-left-arrow.png" />
+    <Content Include="timeline\timeline_js\images\bubble-left.png" />
+    <Content Include="timeline\timeline_js\images\bubble-right-arrow.png" />
+    <Content Include="timeline\timeline_js\images\bubble-right.png" />
+    <Content Include="timeline\timeline_js\images\bubble-top-arrow.png" />
+    <Content Include="timeline\timeline_js\images\bubble-top-left.png" />
+    <Content Include="timeline\timeline_js\images\bubble-top-right.png" />
+    <Content Include="timeline\timeline_js\images\bubble-top.png" />
+    <Content Include="timeline\timeline_js\images\close-button.png" />
+    <Content Include="timeline\timeline_js\images\copyright-vertical.png" />
+    <Content Include="timeline\timeline_js\images\copyright.png" />
+    <Content Include="timeline\timeline_js\images\dark-blue-circle.png" />
+    <Content Include="timeline\timeline_js\images\dark-green-circle.png" />
+    <Content Include="timeline\timeline_js\images\dark-red-circle.png" />
+    <Content Include="timeline\timeline_js\images\dull-blue-circle.png" />
+    <Content Include="timeline\timeline_js\images\dull-green-circle.png" />
+    <Content Include="timeline\timeline_js\images\dull-red-circle.png" />
+    <Content Include="timeline\timeline_js\images\gray-circle.png" />
+    <Content Include="timeline\timeline_js\images\green-circle.png" />
+    <Content Include="timeline\timeline_js\images\message-bottom-left.png" />
+    <Content Include="timeline\timeline_js\images\message-bottom-right.png" />
+    <Content Include="timeline\timeline_js\images\message-left.png" />
+    <Content Include="timeline\timeline_js\images\message-right.png" />
+    <Content Include="timeline\timeline_js\images\message-top-left.png" />
+    <Content Include="timeline\timeline_js\images\message-top-right.png" />
+    <Content Include="timeline\timeline_js\images\progress-running.gif" />
+    <Content Include="timeline\timeline_js\images\red-circle.png" />
+    <Content Include="timeline\timeline_js\images\top-bubble.png" />
+    <Content Include="timeline\timeline_js\scripts\l10n\en\labellers.js" />
+    <Content Include="timeline\timeline_js\scripts\l10n\en\timeline.js" />
+    <Content Include="timeline\timeline_js\scripts\l10n\zh\labellers.js" />
+    <Content Include="timeline\timeline_js\scripts\l10n\zh\timeline.js" />
+    <Content Include="timeline\timeline_js\timeline-api.js" />
+    <Content Include="timeline\timeline_js\timeline-bundle.css" />
+    <Content Include="timeline\timeline_js\timeline-bundle.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22723</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

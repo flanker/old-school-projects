@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/flanker/!svn/ver/30/flankerbasenew/lib
+END
+SubSonic.Core.dll
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/flanker/!svn/ver/30/flankerbasenew/lib/SubSonic.Core.dll
+END
+Newtonsoft.Json.dll
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/flanker/!svn/ver/30/flankerbasenew/lib/Newtonsoft.Json.dll
+END

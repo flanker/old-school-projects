@@ -1,0 +1,37 @@
+﻿body
+{
+}
+#tl
+{
+    width: 800px;
+    height: 220px;
+}
+#map
+{
+    width: 800px;
+    height: 450px;
+}
+.infoContent
+{
+    font-family: sans-serif;
+    font-size: small;
+    width: 300px;
+}
+.infoContent-title
+{
+    font-size: medium;
+    font-weight: bold;
+}
+.infoContent-label
+{
+    font-weight: bold;
+}
+.infoContent-description
+{
+    max-height: 100px;
+    overflow: auto;
+}
+.infoContent-wiki a
+{
+    color: #3366FF;
+}

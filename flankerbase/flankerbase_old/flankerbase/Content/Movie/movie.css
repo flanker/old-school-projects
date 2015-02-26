@@ -1,0 +1,32 @@
+﻿body
+{
+	background-image: url(/Content/Movie/bg.png);
+}
+
+#main
+{
+	width: 600px;
+	margin: 20px auto;
+	background-color: #eeeeee;
+	color: #111111;
+	text-align: center;
+	padding: 10px;
+	-moz-border-radius: 10px;
+}
+#main ul
+{
+	list-style-type: none;
+}
+#main ul li
+{
+	margin-bottom: 10px;
+}
+#main ul li img
+{
+	padding: 3px;
+	border: 1px solid #808080;
+}
+#main ul li span
+{
+	display: block;
+}

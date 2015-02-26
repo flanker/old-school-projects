@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <%= Html.Stylesheet("Main", "dropShadows") %>
+    <%= Html.Javascript("jquery-1.3.2", "jquery.cookie", "dropShadows", "myforms") %>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.NiceJForms.options.imagesPath = '<%= Url.Content("~/content/images/niceform/") %>';
+            $.NiceJForms.build();
+            //$("form :input:first").focus()
+        });
+        function changeLang(lang) {
+            $.cookie('lang', lang);
+            window.location.reload();
+            return false;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both;
+        height: 75px; position: relative;'>
+        <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'>
+            <a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'>
+                <%= Html.Image("ie6nomore/ie6nomore-cornerx.jpg", Strings.close_this_notice) %></a>
+        </div>
+        <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden;
+            color: black;'>
+            <div style='width: 75px; float: left;'>
+                <%= Html.Image("ie6nomore/ie6nomore-warning.jpg", "Warning!") %></div>
+            <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>
+                <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>
+                    <%= Strings.you_are_using_an_outdated_browser %></div>
+                <div style='font-size: 12px; margin-top: 6px; line-height: 14px;'>
+                    <%= Strings.for_a_better_experience_blablabla %></div>
+            </div>
+            <div style='width: 75px; float: left;'>
+                <a href='http://www.firefox.com' target='_blank'>
+                    <%= Html.Image("ie6nomore/ie6nomore-firefox.jpg", Strings.get_Firefox)%></a></div>
+            <div style='width: 75px; float: left;'>
+                <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
+                    <%= Html.Image("ie6nomore/ie6nomore-ie8.jpg", Strings.get_Internet_Explorer)%></a></div>
+            <div style='width: 73px; float: left;'>
+                <a href='http://www.apple.com/safari/download/' target='_blank'>
+                    <%= Html.Image("ie6nomore/ie6nomore-safari.jpg", Strings.get_Safari)%></a></div>
+            <div style='float: left;'>
+                <a href='http://www.google.com/chrome' target='_blank'>
+                    <%= Html.Image("ie6nomore/ie6nomore-chrome.jpg", Strings.get_Google_Chrome)%></a></div>
+        </div>
+    </div>
+    <![endif]-->
+    <div class="page">
+        <div id="header">
+            <div id="changeLang">
+                <span class="highContrast">
+                    <%= Strings.choose_language %></span>
+                <a href="#" title="english" class="en" onclick="changeLang('en-us')">
+                    <span>english</span></a>
+                <a href="#" title="中文" class="zh" onclick="changeLang('zh-cn')">
+                    <span>中文</span></a>
+            </div>
+            <h1 id="title">
+                <%= Html.RouteLink(Strings.flankerBase, "Default", null, new { @class = "highContrast" })%>
+            </h1>
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div>
+            <ul id="menu">
+                <li>
+                    <%= Html.RouteLink(Strings.blog, "Blogs", null, new { @class = "highContrast" } )%></li>
+                <li>
+                    <%= Html.RouteLink(Strings.about, "About", null, new { @class = "highContrast" } )%></li>
+                <li>
+                    <%= Html.RouteLink(Strings.create, "CreateBlog", null, new { @class = "highContrast" } )%></li>
+            </ul>
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div id="footer">
+            <p class="highContrast">
+                <%= Strings.flankerBase %>
+                @ 2009</p>
+        </div>
+    </div>
+</body>
+</html>

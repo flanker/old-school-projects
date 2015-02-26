@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        #header {
+            background-color: #99B1E7;
+            padding: 2px 10px;
+        }
+        #content {
+            width: 960px;
+            height: 500px;
+            margin: 5px auto;
+            position: relative;
+            border: solid 5px #99B1E7;
+        }
+        #view {
+            position: relative;
+            overflow: hidden;
+        }
+        #viewport {
+            position: relative;
+            left: 160px;
+            width: 10000px;
+        }
+        .viewpart {
+            float: left;
+            width: 600px;
+            height: 400px;
+            background-color: #99B1E7;
+            padding: 0px;
+            margin: 10px 20px;
+        }
+        #footer {
+            background-color: #99B1E7;
+            padding: 2px 10px;
+        }
+    </style>
+    <script src="scripts/jquery-1.4.4.js" type="text/javascript"></script>
+    <!--<script src="scripts/jquery.hotkeys-0.7.9.js" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        var moving = false;
+        $(function() {
+            var next = function() {
+                if (!moving) {
+                    var $viewport = $('#viewport');
+                    var left = parseInt($viewport.css('left'));
+                    if (left > -3600) {
+                        moving = true;
+                        $viewport.animate({ 'left': left - 640 }, 2000, function() {
+                            moving = false;
+                        });
+                    }
+                }
+            }
+            var prev = function() {
+                if (!moving) {
+                    var $viewport = $('#viewport');
+                    var left = parseInt($viewport.css('left'));
+                    if (left < -100) {
+                        $viewport.animate({ 'left': left + 640 }, 2000, function() {
+                            moving = false;
+                        });
+                    } 
+                }
+            }
+            $('#next').click(next);
+            $('#prev').click(prev);
+            $(window).keydown(function(event) {
+                switch (event.keyCode) {
+                    case 13: //回车
+                    case 32: //空格
+                    case 39: //右方向键
+                        next();
+                        break;
+                    case 37: //左方向键
+                        prev();
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <h1>my test web page</h1>
+        </div>
+        <div id="content">
+            <div id="view">
+                <div id="viewport">
+                    <div class="viewpart">
+                        <h1>Test1</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test2</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test3</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test4</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test5</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test6</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                    <div class="viewpart">
+                        <h1>Test7</h1>
+                        <p>bla bla bla bla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input id="prev" type="button" value="上一个" />
+            <input id="next" type="button" value="下一个" />
+        </div>
+        <div id="footer">
+            <h1>copyleft</h1>
+        </div>
+    </div>
+</body>
+</html>

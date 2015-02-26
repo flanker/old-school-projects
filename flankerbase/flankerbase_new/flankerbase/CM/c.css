@@ -1,0 +1,42 @@
+﻿body
+{
+	background-color: #F2CCDA;
+}
+#content
+{
+	margin: 0;
+	padding: 0;
+	background-color: #F2CCDA;
+}
+h1
+{
+	font-size: 26px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+a
+{
+	color: #A80E4A;
+}
+#X
+{
+	padding: 5px;
+}
+#process
+{
+	padding: 5px;
+}
+#menu
+{
+	padding: 5px;
+}
+#main
+{
+	padding: 5px;
+	background-color: #F2CCDA;
+}
+#main div
+{
+	border-bottom: solid 1px #A80E4A;
+	padding: 5px;
+}

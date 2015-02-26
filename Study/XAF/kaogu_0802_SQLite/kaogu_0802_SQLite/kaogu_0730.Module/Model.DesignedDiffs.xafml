@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="kaogu_0730" Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="kaogu_0730.Module.Base.BaseDomainObject">
+      <OwnMembers>
+        <Member Name="Code" Caption="编码" />
+        <Member Name="Name" Caption="名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="kaogu_0730.Module.Base.DocNoSequenceSetting" DefaultListViewMasterDetailMode="ListViewAndDetailView" />
+    <Class Name="kaogu_0730.Module.Base.SequenceDefineSegment">
+      <OwnMembers>
+        <Member Name="IsFlowBy" Caption="是否流水依据" />
+        <Member Name="Number" Caption="序号" />
+        <Member Name="PadCharacter" Caption="补位字符" />
+        <Member Name="PadType" Caption="补位方式" />
+        <Member Name="SegmentLength" Caption="段长度" />
+        <Member Name="SegmentSplitMark" Caption="连接符" />
+        <Member Name="SegmentType" Caption="段类型" />
+        <Member Name="SegmentValue" Caption="段值" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Base" IsNewNode="True" Caption="基础设置">
+        <Items IsNewNode="True">
+          <Item Id="DocNoSequenceSetting_ListView" IsNewNode="True" ViewId="DocNoSequenceSetting_ListView" ObjectKey="" Index="-1" Caption="单据编码设置" />
+          <Item Id="SequenceDefine_ListView" IsNewNode="True" ViewId="SequenceDefine_ListView" ObjectKey="" Caption="编码规则" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items>
+          <Item Id="DocNoSequenceSetting_ListView" Removed="True" />
+          <Item Id="SequenceDefine_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views>
+    <ListView Id="DocNoSequenceSetting_ListView" MasterDetailMode="ListViewAndDetailView" />
+    <ListView Id="Project_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SequenceDefine_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutItem Id="Code" IsNewNode="True" Index="1" RelativeSize="4" />
+          <LayoutItem Id="Name" IsNewNode="True" Index="2" RelativeSize="4" />
+          <LayoutItem Id="Nothing" IsNewNode="True" Index="3" RelativeSize="4" />
+          <LayoutGroup Id="Segments_Group" Direction="Vertical" Index="4" RelativeSize="83">
+            <LayoutItem Id="Segments" RelativeSize="92" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" Direction="Horizontal" RelativeSize="3">
+            <LayoutGroup Id="BaseDomainObject" Removed="True" />
+            <LayoutGroup Id="SequenceDefine" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SequenceDefine_ListView" MasterDetailMode="ListViewAndDetailView">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" Width="250" />
+        <ColumnInfo Id="Name" Width="250" />
+        <ColumnInfo Id="Nothing" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

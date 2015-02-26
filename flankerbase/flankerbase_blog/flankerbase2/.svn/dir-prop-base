@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 58
+bin
+flankerbase2.Publish.xml
+flankerbase2.csproj.user
+obj
+
+END

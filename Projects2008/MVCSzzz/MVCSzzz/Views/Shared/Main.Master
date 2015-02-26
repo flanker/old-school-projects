@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="Header" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>MVC 演示网站</h1>
+            </div>
+            <div id="logindisplay">
+                <% if (Request.IsAuthenticated)
+                   {
+                %>
+                欢迎,
+                <%= Page.User.Identity.Name %>
+                (<%= Html.ActionLink("注销","Logout","Account") %>)
+                <%
+                    }
+                   else
+                   {
+                %>
+                请<%=Html.ActionLink("登录","Login", "Account") %>
+                <%
+                    } %>
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>
+                        <%=Html.ActionLink("主页","Index","Home") %></li>
+                    <li>
+                        <%=Html.ActionLink("我的档案","About","Home") %></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="Main" runat="server"></asp:ContentPlaceHolder>
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

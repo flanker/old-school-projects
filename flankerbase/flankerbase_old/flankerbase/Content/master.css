@@ -1,0 +1,100 @@
+﻿/* css-reset ----------------------------------------*/
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	background: #000000 none repeat scroll 0 0;
+	color: #ffffff;
+	font-family: "Segoe" , "Arial" , "Helvetica" , sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+}
+a
+{
+	color: #ffffff;
+	text-decoration: none;
+	outline: none;
+}
+a:hover
+{
+	color: #33CCCC;
+	text-decoration: underline;
+}
+img, a img
+{
+	border: 0 none;
+}
+/* menu ----------------------------------------*/
+#menu
+{
+	width: 500px;
+	margin: 20px auto;
+	text-align: center;
+	min-height: 50px;
+	height: 50px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	position: relative;
+}
+#menu ul
+{
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#menu ul li
+{
+	width: 70px;
+	height: 20px;
+	float: left;
+	color: #191919;
+	text-align: center;
+	overflow: hidden;
+	display: block;
+}
+#menu ul a
+{
+	color: #191919;
+	text-decoration: none;
+}
+#menu ul p
+{
+	padding: 0px 5px;
+	margin-top: 4px;
+}
+/*Menu Color Classes*/
+.c1
+{
+	background: #DF0029;
+}
+.c2
+{
+	background: #FF7F00;
+}
+.c3
+{
+	background: #EEEE00;
+}
+.c4
+{
+	background: #66CD00;
+}
+.c5
+{
+	background: #76EEC6;
+}
+.c6
+{
+	background: #1874CD;
+}
+.c7
+{
+	background: #68228B;
+}

@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %><!DOCTYPE html>
+<html>
+<head>
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /> - 超级无敌 - 冯智超的个人网站</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href="/Content/Home/home.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="InHeadContent" runat="server" />
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="toMobile"><a href="/m" title="移动版" class="blockLink">访问网站的移动版</a></div>
+            <h1>
+                <%= Html.ActionLink("超级无敌", "Index", "Home", null, new { title = "冯智超的个人网站", @class="blockLink" })%></h1>
+            <div id="under-logo">超级无敌 - 冯智超的个人网站</div>
+        </div>
+        <div id="nav" class="fullWidthLine">
+            <ul>
+                <li>
+                    <%= Html.ActionLink("首页", "Index", "Home", null, new { title = "冯智超的个人网站", @class = "blockLink" })%></li>
+                <li>
+                    <%= Html.ActionLink("关于", "About", "Home", null, new { title = "关于冯智超以及超级无敌网站的一些信息", @class = "blockLink" })%></li>
+                <li>
+                    <%= Html.ActionLink("社会化的我", "Social", "Home", null, new { title = "冯智超的社会化网络", @class = "blockLink" })%></li>
+                <li><a href="http://blog.chaojiwudi.com" title="blog" class="blockLink">我的博客</a></li>
+                <li>
+                    <%= Html.ActionLink("我的推特", "Index", "Twitter", null, new { title = "冯智超 @flankerfc 推特信息", @class = "blockLink" })%></li>
+                <li>
+                    <%= Html.ActionLink("我的收藏", "Index", "Tool", null, new { title = "我常用的一些工具列表", @class = "blockLink" })%></li>
+                <li>
+                    <%= Html.ActionLink("Demo示例", "Index", "Demo", null, new { title = "一些Demo示例程序代码等", @class = "blockLink" })%></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="InPageContent" runat="server" />
+        </div>
+        <div id="footer" class="fullWidthLine">
+            <% Html.RenderPartial("FooterDiv"); %>
+        </div>
+    </div>
+<% Html.RenderPartial("GA"); %>
+</body>
+</html>
+

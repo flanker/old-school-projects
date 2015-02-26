@@ -1,0 +1,139 @@
+﻿/*html, body, h1, h2, h3, h4, h5, ul, li, ol, blockquote, p
+{
+	margin: 0;
+	padding: 0;
+}
+*/
+html, body, h1, h2, h3, h4, h5, blockquote, p
+{
+	margin: 0;
+	padding: 0;
+}
+html
+{
+	background: #FFFFFF url(bg.jpg) repeat scroll center top;
+}
+body
+{
+	color: #1A1A1A;
+	font-family: Arial, sans, Sans-Serif;
+}
+a
+{
+	color: #1A1A1A;
+	text-decoration: none;
+}
+a:focus
+{
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: medium;
+}
+img
+{
+	border: none;
+}
+ul
+{
+	margin: 0;
+	padding-left: 20px;
+}
+label
+{
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+}
+label.inline
+{
+	display: inline;
+}
+input[type="text"], input[type="password"], textarea
+{
+	width: 400px;
+	font-size: 14px;
+	padding: 5px;
+	font-family: Arial, sans, Sans-Serif;
+}
+.inputFocus
+{
+	border: 2px solid #6694E3;
+}
+.error
+{
+	color: Red;
+}
+.field-validation-error
+{
+	color: #ff0000;
+}
+.input-validation-error
+{
+	border: 1px solid #ff0000 !important;
+	background-color: #ffeeee;
+}
+.validation-summary-errors
+{
+	/*font-weight: bold;*/
+	color: #ff0000;
+}
+
+/* page */
+.page
+{
+	margin: 0 auto;
+	width: 640px;
+}
+/* begin: #header */
+#header
+{
+	width: 640px;
+    margin: 10px auto;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px #E2E3E5;
+}
+#main
+{
+    width: 640px;
+    margin: 0 auto;
+}
+.entry
+{
+	margin-bottom: 10px;
+}
+.entry-user
+{
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #E2E3E5;
+}
+.entry-createdat
+{
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	text-shadow: 1px 1px 1px #E2E3E5;
+}
+.entry-tools
+{
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #E2E3E5;
+}
+.entry-content-wrap
+{
+	clear: both;
+	padding-bottom: 24px;
+	background: transparent url(landscape-shadow.png) no-repeat scroll center bottom;
+}
+.entry-content
+{
+	background-color: #FFFFFF;
+	border: 1px solid #85878C;
+	padding: 12px;
+	font-size: 14px;
+	line-height: 22px;
+	text-indent: 2em;
+}
+

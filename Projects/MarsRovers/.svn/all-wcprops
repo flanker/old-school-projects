@@ -1,0 +1,33 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 25
+/svn/MarsRovers/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/MarsRovers/!svn/ver/5
+END
+MarsRoversTests.nunit
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/MarsRovers/!svn/ver/1/MarsRoversTests.nunit
+END
+DemoInput.txt
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/MarsRovers/!svn/ver/4/DemoInput.txt
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/MarsRovers/!svn/ver/10/readme.txt
+END
+MarsRovers-VS2008.sln
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/MarsRovers/!svn/ver/1/MarsRovers-VS2008.sln
+END

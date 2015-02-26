@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/flanker/!svn/ver/51/flankerbasenew/flankerbase/Views/Shared
+END
+Mobile.Master
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Views/Shared/Mobile.Master
+END
+MobileContentLast.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/flanker/!svn/ver/30/flankerbasenew/flankerbase/Views/Shared/MobileContentLast.ascx
+END
+GA.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/flanker/!svn/ver/34/flankerbasenew/flankerbase/Views/Shared/GA.ascx
+END
+MobileFooterDiv.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/flanker/!svn/ver/51/flankerbasenew/flankerbase/Views/Shared/MobileFooterDiv.ascx
+END
+FooterDiv.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/flanker/!svn/ver/51/flankerbasenew/flankerbase/Views/Shared/FooterDiv.ascx
+END
+Site.Master
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/flanker/!svn/ver/49/flankerbasenew/flankerbase/Views/Shared/Site.Master
+END

@@ -1,0 +1,16 @@
+# Microsoft Developer Studio 项目文件 -- 数据库项目
+Begin DataProject = "CreateDB"
+   MSDTVersion = "80"
+   Begin Folder = "Change Scripts"
+   End
+   Begin Folder = "Create Scripts"
+      Script = "CreateTables.sql"
+   End
+   Begin Folder = "Database Backup"
+      Node = "flankerbase_blog.bak"
+   End
+   Begin DBRefFolder = "Database References"
+   End
+   Begin Folder = "Queries"
+   End
+End

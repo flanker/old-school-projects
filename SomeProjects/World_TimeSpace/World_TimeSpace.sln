@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "World_TimeSpace.Module", "World_TimeSpace.Module\World_TimeSpace.Module.csproj", "{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "World_TimeSpace.Module.Web", "World_TimeSpace.Module.Web\World_TimeSpace.Module.Web.csproj", "{577CBE68-7A75-4662-AEEA-991D8A114ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "World_TimeSpace.Module.Win", "World_TimeSpace.Module.Win\World_TimeSpace.Module.Win.csproj", "{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "World_TimeSpace.Web", "World_TimeSpace.Web\World_TimeSpace.Web.csproj", "{14D719EC-8276-4025-B286-4ECFDDDC43E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "World_TimeSpace.Win", "World_TimeSpace.Win\World_TimeSpace.Win.csproj", "{E85FB39A-4259-4BB5-B1F8-853B9D78F088}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D421B9C7-E3E2-4274-B908-DD5169EE2CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577CBE68-7A75-4662-AEEA-991D8A114ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1C8C61-642A-42D8-A2A2-C2DE7CDEF22B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D719EC-8276-4025-B286-4ECFDDDC43E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85FB39A-4259-4BB5-B1F8-853B9D78F088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

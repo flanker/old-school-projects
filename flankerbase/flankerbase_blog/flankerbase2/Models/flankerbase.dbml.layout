@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="flankerbase">
+  <DataContextMoniker Name="/flankerbaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b1d0ba83-f591-4bc1-b34b-368d14091e5f" absoluteBounds="0.5, 0.75, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/flankerbaseDataContext/Blog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d4ee7cd-9b7b-4cf6-b5f2-25b49e49cf9c" absoluteBounds="0.51500000000000012, 1.21, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="468fa87c-5f7c-461d-8e16-b4b916c361db" absoluteBounds="2.875, 0.75, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/flankerbaseDataContext/Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02e48c73-5f24-4065-ba91-a6935beb7617" absoluteBounds="2.89, 1.21, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.72679260253906); (2.875 : 1.72679260253906)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/flankerbaseDataContext/Blog/Blog_Comments" />
+      <nodes>
+        <classShapeMoniker Id="b1d0ba83-f591-4bc1-b34b-368d14091e5f" />
+        <classShapeMoniker Id="468fa87c-5f7c-461d-8e16-b4b916c361db" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

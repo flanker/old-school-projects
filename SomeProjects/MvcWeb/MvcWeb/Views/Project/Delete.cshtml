@@ -1,0 +1,36 @@
+﻿@model kaogu_0730.Module.Project
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Project</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Identify</div>
+    <div class="display-field">@Model.Identify</div>
+
+    <div class="display-label">Start</div>
+    <div class="display-field">@String.Format("{0:g}", Model.Start)</div>
+
+    <div class="display-label">End</div>
+    <div class="display-field">@String.Format("{0:g}", Model.End)</div>
+
+    <div class="display-label">Note</div>
+    <div class="display-field">@Model.Note</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

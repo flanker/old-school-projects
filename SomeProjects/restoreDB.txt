@@ -1,0 +1,1 @@
+pg_restore.exe --host localhost --port 5432 --username postgres --dbname ais2011 --verbose "E:\flanker\Dev\test\test\trunk\AIS2011\database\bak\ais2011.backup"

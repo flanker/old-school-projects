@@ -1,0 +1,18 @@
+﻿@model IEnumerable<World_TimeSpace.Module.WorldRegion>
+           
+@{
+    ViewBag.Title = "WRegion";
+}
+
+<h2>WRegion</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <div>
+        @item.Id
+   
+        | @item.Name
+        </div>
+    </div>
+}

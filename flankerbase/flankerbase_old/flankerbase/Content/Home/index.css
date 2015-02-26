@@ -1,0 +1,122 @@
+﻿body
+{
+	background: #000000 url(/Content/Home/bg.gif);
+	color: #ffffff;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 60%;
+	margin: 0;
+	padding: 0;
+}
+#beian
+{
+	float: right;
+	margin-right: 5px;
+}
+#beian a
+{
+	text-decoration: none;
+	color: #808080;
+}
+#musicBox
+{
+	position: fixed;
+	bottom: 2px;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	left: 0px;
+	background-color: #000000;
+	border-top-style: solid;
+	border-top-color: #666666;
+	border-top-width: 2px;
+	padding-top: 2px;
+	background-image: url(/Content/Home/bottom.gif);
+	background-repeat: repeat-x;
+	text-align: center;
+}
+#music
+{
+	height: 22px;
+	width: 300px;
+	margin: 0px auto;
+	vertical-align: middle;
+}
+#main
+{
+	width: 600px;
+	margin: 0px auto 0;
+	padding-top: 160px;
+}
+#change
+{
+	background-image: url(/Content/Home/change.png);
+	background-repeat: no-repeat;
+	background-position: 7px 0px;
+	height: 50px;
+	width: 180px;
+}
+#change:hover
+{
+	background-position: -185px 0px;
+}
+#menu
+{
+	width: 600px;
+	margin: 20px auto;
+}
+#menu ul
+{
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 8px;
+	padding: 0px;
+}
+#menu ul li
+{
+	width: 70px;
+	height: 20px;
+	float: left;
+	color: #191919;
+	text-align: center;
+	overflow: hidden;
+	display: block;
+}
+#menu ul a
+{
+	color: #191919;
+	text-decoration: none;
+}
+#menu ul p
+{
+	padding: 0px 5px;
+	margin-top: 4px;
+}
+/*Menu Color Classes*/
+.c1
+{
+	background: #DF0029;
+}
+.c2
+{
+	background: #FF7F00;
+}
+.c3
+{
+	background: #EEEE00;
+}
+.c4
+{
+	background: #66CD00;
+}
+.c5
+{
+	background: #76EEC6;
+}
+.c6
+{
+	background: #1874CD;
+}
+.c7
+{
+	background: #68228B;
+}

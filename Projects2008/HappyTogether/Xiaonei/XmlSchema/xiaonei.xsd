@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://api.xiaonei.com/1.0/" targetNamespace="http://api.xiaonei.com/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="uid">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="nid">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="sex">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="date">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="year">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="auth_token">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="session_key">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="hs_info">
+		<xs:all minOccurs="0">
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="grad_year" type="year" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="hs_history">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hs_info" type="hs_info" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="list" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="university_info">
+		<xs:all minOccurs="0">
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="year" type="year" minOccurs="0"/>
+			<xs:element name="department" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="university_history">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="university_info" type="university_info" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="list" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="work_info">
+		<xs:all>
+			<xs:element name="company_name" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="start_date" type="date" minOccurs="0"/>
+			<xs:element name="end_date" type="date" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="work_history">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="work_info" type="work_info" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="list" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="hometown_location">
+		<xs:all>
+			<xs:element name="country" type="xs:string" minOccurs="0"/>
+			<xs:element name="province" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="user">
+		<xs:all>
+			<xs:element name="uid" type="uid"/>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="sex" type="sex" minOccurs="0"/>
+			<xs:element name="birthday" type="date" minOccurs="0"/>
+			<xs:element name="tinyurl" type="xs:string" minOccurs="0"/>
+			<xs:element name="headurl" type="xs:string" minOccurs="0"/>
+			<xs:element name="mainurl" type="xs:string" minOccurs="0"/>
+			<xs:element name="hometown_location" type="hometown_location" minOccurs="0"/>
+			<xs:element name="work_history" type="work_history" minOccurs="0"/>
+			<xs:element name="university_history" type="university_history" minOccurs="0"/>
+			<xs:element name="hs_history" type="hs_history" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="session_info">
+		<xs:all>
+			<xs:element name="session_key" type="session_key"/>
+			<xs:element name="uid" type="uid"/>
+			<xs:element name="secret" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="friend">
+		<xs:all>
+			<xs:element name="id" type="uid"/>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="headurl" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="friend_info">
+		<xs:sequence>
+			<xs:element name="uid1" type="uid"/>
+			<xs:element name="uid2" type="uid"/>
+			<xs:element name="are_friends" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="users_getInfo_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="user" type="user" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="list" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="users_getLoggedInUser_response">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="uid"/>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="users_isAppAdded_response" type="xs:boolean"/>
+	<xs:element name="profile_setXNML_response" type="xs:boolean"/>
+	<xs:element name="profile_getXNML_response" type="xs:string"/>
+	<xs:element name="auth_createToken_response" type="auth_token"/>
+	<xs:element name="auth_getSession_response" type="session_info"/>
+	<xs:element name="friends_get_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="uid" type="uid" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="list" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="friends_getFriends_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="friend" type="friend" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="list" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="friends_areFriends_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="friend_info" type="friend_info" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="list" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="friends_getAppUsers_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="uid" type="uid" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="list" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="requests_sendRequest_response">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="uid" type="uid" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="feed_publishTemplatizedAction_response" type="xs:boolean"/>
+	<xs:element name="notifications_send_response"/>
+</xs:schema>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="MySolution" Logo="ExpressAppLogo">
+  <ActionDesign>
+    <Actions>
+      <Action Id="ClearFieldsAction" ConfirmationMessage="Do you really need to clear the {0} all fields?" Shortcut="Control+C" ToolTip="Clear Fields of the object." SelectionDependencyType="RequireSingleObject" />
+      <Action Id="Task.MarkCompleted" ValidationContexts="MarkCompleted" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PhoneNumber">
+      <OwnMembers>
+        <Member Name="Number" EditMask="(000)000-000" DisplayFormat="{0:(000)000-000}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Task">
+      <OwnMembers>
+        <Member Name="Subject" RowCount="2" Size="200" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MySolution.Module.Contact" ObjectCaptionFormat="{0:FullName} from the {0:Department}" ImageName="Employee">
+      <OwnMembers>
+        <Member Name="Position" DataSourcePropertyIsNullMode="SelectAll" DataSourceProperty="Department.Positions" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MySolution.Module.Department" ImageName="BO_Department" />
+    <Class Name="MySolution.Module.Payment">
+      <OwnMembers>
+        <Member Name="Rate" ImmediatePostData="True" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Event" IsNewNode="True" />
+    <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Note" IsNewNode="True" />
+  </CreatableItems>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Note_ListView" IsNewNode="True" ViewId="Note_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Rules>
+      <RuleCriteria Id="TaskIsNotStarted" IsNewNode="True" Criteria="Status != 'NotStarted'" TargetContextIDs="MarkCompleted" TargetType="DevExpress.Persistent.BaseImpl.Task" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="Contact_DetailView">
+      <Items>
+        <PropertyEditor Id="Department.Office" IsNewNode="True" PropertyName="Department.Office" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="48">
+            <TabbedGroup Id="Item1" IsNewNode="True" CaptionLocation="Top" Index="0" RelativeSize="58">
+              <LayoutGroup Id="Contact" IsNewNode="True" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100">
+                <LayoutGroup Id="Contact_col1" IsNewNode="True" Index="0" RelativeSize="50">
+                  <LayoutItem Id="WebPageAddress" IsNewNode="True" Index="0" RelativeSize="28" />
+                  <LayoutItem Id="NickName" IsNewNode="True" Index="1" RelativeSize="21" />
+                  <LayoutItem Id="SpouseName" IsNewNode="True" Index="2" RelativeSize="21" />
+                  <LayoutItem Id="TitleOfCourtesy" IsNewNode="True" Index="3" RelativeSize="28" />
+                </LayoutGroup>
+                <LayoutGroup Id="Contact_col2" IsNewNode="True" Index="1" RelativeSize="50">
+                  <LayoutItem Id="Anniversary" IsNewNode="True" Index="0" RelativeSize="28" />
+                  <LayoutItem Id="Position" IsNewNode="True" Index="1" RelativeSize="21" />
+                  <LayoutItem Id="Department" IsNewNode="True" Index="2" RelativeSize="21" />
+                  <LayoutItem Id="Manager" IsNewNode="True" Index="3" RelativeSize="28" />
+                  <LayoutItem Id="Department.Office" IsNewNode="True" Caption="Office" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Person" IsNewNode="True" ShowCaption="True" Direction="Horizontal" Index="1" RelativeSize="100">
+                <LayoutGroup Id="Person_col1" IsNewNode="True" Index="0" RelativeSize="50">
+                  <LayoutItem Id="FirstName" IsNewNode="True" Index="0" RelativeSize="28" />
+                  <LayoutItem Id="LastName" IsNewNode="True" Index="1" RelativeSize="21" />
+                  <LayoutItem Id="MiddleName" IsNewNode="True" Index="2" RelativeSize="50" />
+                </LayoutGroup>
+                <LayoutGroup Id="Person_col2" IsNewNode="True" Index="1" RelativeSize="50">
+                  <LayoutItem Id="Birthday" IsNewNode="True" Index="0" RelativeSize="28" />
+                  <LayoutItem Id="FullName" IsNewNode="True" Index="1" RelativeSize="21" />
+                  <LayoutItem Id="Email" IsNewNode="True" Index="2" RelativeSize="50" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Party" Index="1" RelativeSize="41">
+              <LayoutItem Id="Address1" RelativeSize="22" />
+              <LayoutItem Id="Address2" RelativeSize="22" />
+              <LayoutItem Id="DisplayName" RelativeSize="27" />
+              <LayoutItem Id="Photo" RelativeSize="27" />
+            </LayoutGroup>
+            <LayoutGroup Id="Contact" Removed="True" />
+            <LayoutGroup Id="Person" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="6">
+            <LayoutItem Id="Notes" RelativeSize="100" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="45">
+            <LayoutGroup Id="Tasks" RelativeSize="100">
+              <LayoutItem Id="Tasks" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" RelativeSize="100">
+              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Contact_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Department" GroupIndex="1" />
+      </Columns>
+      <Filters CurrentFilterId="Developers">
+        <Filter Id="AllContacts" IsNewNode="True" />
+        <Filter Id="Developers" IsNewNode="True" Criteria="Position.Title = 'Developer'" />
+        <Filter Id="Development Department Contacts." IsNewNode="True" Caption="Development Department Contacts." Criteria="[Department.Title] = 'Development Department'" />
+      </Filters>
+    </ListView>
+    <ListView Id="Department_ListView" MasterDetailMode="ListViewAndDetailView" />
+  </Views>
+</Application>

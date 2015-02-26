@@ -1,0 +1,20 @@
+﻿@model IEnumerable<World_TimeSpace.Module.WorldTime>
+
+@{
+    ViewBag.Title = "WTime";
+}
+
+<h2>WTime</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <div>
+        @item.Id |
+        
+        @item.StartOn - @item.EndOn
+        
+        | @item.Name
+        </div>
+    </div>
+}

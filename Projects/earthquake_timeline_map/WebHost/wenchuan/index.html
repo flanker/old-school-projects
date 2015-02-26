@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+    <title>地震-timeline</title>
+
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAN2dpNpQtuuCXGwhFQOd6uhTMyqVQxKr1gZwMnq_LTInIzd8jHxS1RjujTXkwZUhbYlRLFADoF_7CHw"
+        type="text/javascript"></script>
+
+    <!--引入Google Map API 其中key需要在官网申请-->
+
+    <script src="api/timeline-api.js" type="text/javascript"></script>
+
+    <!--引入timeline-->
+
+    <script type="text/javascript" src="js/js.js"></script>
+
+    <!--timeline和map的操纵在该js中实现-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!--一个优秀的javascript框架，在这里实现Ajax一些效果-->
+
+    <script type="text/javascript" src="js/thickbox.js"></script>
+
+    <!--实现Ajax效果-->
+</head>
+<body onload="initialize()" onunload="GUnload()">
+    <div id="header">
+        <h1>全球一周地震信息</h1>
+        <h2>(v0.0100)</h2>
+    </div>
+    <div id="body">
+        <div id="leftbody">
+            <div>
+                <h2>帮助</h2>
+                <p>共有 <span id="eventNumber">?</span> 个事件</p>
+                <p>点击事件列表，或时间轴上的事件点，地图会显示事件相关信息。时间轴可拖动。</p>
+                <ul id="menu"></ul>
+                <p id="loading">
+                    <img src="images/loading.gif" alt="loading" /></p>
+            </div>
+            <div>
+                <h2>功能</h2>
+                <ul id="setting">
+                    <li id="showLines"><a href="javascript:showLines();">显示连线</a></li>
+                    <li id="hideLines" class="hide"><a href="javascript:hideLines();">隐藏连线</a></li>
+                    <li><a href="javascript:test();">测试</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>日志</h2>
+                <p><a href="#TB_inline?height=400&width=300&inlineId=logs" class="thickbox" title="修改记录">
+                    查看修改记录</a></p>
+            </div>
+        </div>
+        <div id="rightbody">
+            <div id="map_canvas">
+                Loading Google Map...</div>
+            <div id="timeline_canvas">
+                Loading Timeline...</div>
+        </div>
+    </div>
+    <div id="footer">
+        2008 <a href="mailto:flankerfc@gmail.com">flanker</a> &amp; <a href="mailto:szcomet@gmail.com">
+            szzz</a>. | Powered by <a href="http://maps.google.com" target="_blank">
+                <img src="images/google_maps.gif" alt="Google Maps" /></a> <a href="http://simile.mit.edu/timeline/"
+                    target="_blank">
+                    <img src="images/mit_simile.png" alt="MIT Simile Timeline" /></a></div>
+    <div id="logs">
+        <p>
+            <dl>
+                <dt>v0.009</dt>
+                <dd>menu与map显示点击事件前后5个；其他样式和内容的小修改</dd>
+                <dt>v0.008</dt>
+                <dd>随着Timeline动态加载menu列表和map标记。</dd>
+                <dt>v0.007</dt>
+                <dd>Timeline动画移动。</dd>
+                <dt>v0.006</dt>
+                <dd>添加显示和隐藏连线。</dd>
+                <dt>v0.005</dt>
+                <dd>添加图标序号；修改样式。</dd>
+                <dt>v0.004</dt>
+                <dd>数据XML化；建立修改记录。</dd>
+                <dt>v0.003</dt>
+                <dd>关联Google Maps和Simile Timeline。</dd>
+                <dt>v0.002</dt>
+                <dd>建立Simile Timeline。</dd>
+                <dt>v0.001</dt>
+                <dd>建立Google Maps。</dd>
+            </dl>
+        </p>
+    </div>
+</body>
+</html>

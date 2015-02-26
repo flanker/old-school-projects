@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="MySolution" Logo="ExpressAppLogo">
+  <ActionDesign>
+    <Actions>
+      <Action Id="ClearFieldsAction" ConfirmationMessage="Do you really need to clear the {0} all fields?" Shortcut="Control+C" ToolTip="Clear Fields of the object." SelectionDependencyType="RequireSingleObject" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PhoneNumber">
+      <OwnMembers>
+        <Member Name="Number" EditMask="(000)000-000" DisplayFormat="{0:(000)000-000}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Task">
+      <OwnMembers>
+        <Member Name="Subject" RowCount="2" Size="200" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MySolution.Module.Contact" ObjectCaptionFormat="{0:FullName} from the {0:Department}" ImageName="Employee">
+      <OwnMembers>
+        <Member Name="Position" DataSourcePropertyIsNullMode="SelectAll" DataSourceProperty="Department.Positions" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MySolution.Module.Department" ImageName="BO_Department" />
+    <Class Name="MySolution.Module.Payment">
+      <OwnMembers>
+        <Member Name="Rate" ImmediatePostData="True" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Note" IsNewNode="True" />
+  </CreatableItems>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Note_ListView" IsNewNode="True" ViewId="Note_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProjectXAF.Module.Project>
+
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Projects</h2>
+
+@foreach (var item in Model)
+{
+    <div class="project-entry">
+        <div class="project-entry-title">
+        @item.Code : @Html.ActionLink(item.Title, "Detail", new { Code = item.Code })
+        </div>
+        <div class="project-entry-date">
+        @item.StartDate.ToString("yyyy-MM-dd") - @item.EndDate.ToString("yyyy-MM-dd")
+        </div>
+        <div class="project-entry-description">
+        @item.Description
+        </div>
+    </div>
+}
+
+

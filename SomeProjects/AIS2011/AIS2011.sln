@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIS2011.Module", "AIS2011.Module\AIS2011.Module.csproj", "{62861CDE-7F39-41C9-B384-F041D8846631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIS2011.Module.Web", "AIS2011.Module.Web\AIS2011.Module.Web.csproj", "{B0256BA5-AF74-492E-B662-48FFF7DFE537}"
+EndProject
+Project("{00000000-0000-0000-0000-000000000000}") = "AIS2011.Web", "AIS2011.Web\AIS2011.Web.csproj", "{8A116273-3781-4A32-B63A-5AE2415E5075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIS2011.Module.Win", "AIS2011.Module.Win\AIS2011.Module.Win.csproj", "{C9F56950-D9A2-4986-A156-399A6BA3CD70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIS2011.Win", "AIS2011.Win\AIS2011.Win.csproj", "{0E1C339A-5380-449E-B810-3965F46A973E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62861CDE-7F39-41C9-B384-F041D8846631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62861CDE-7F39-41C9-B384-F041D8846631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62861CDE-7F39-41C9-B384-F041D8846631}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{62861CDE-7F39-41C9-B384-F041D8846631}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{62861CDE-7F39-41C9-B384-F041D8846631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62861CDE-7F39-41C9-B384-F041D8846631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0256BA5-AF74-492E-B662-48FFF7DFE537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A116273-3781-4A32-B63A-5AE2415E5075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F56950-D9A2-4986-A156-399A6BA3CD70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1C339A-5380-449E-B810-3965F46A973E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
