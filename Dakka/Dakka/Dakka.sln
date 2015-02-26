@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakkaData", "DakkaData\DakkaData.csproj", "{BF620379-268D-4E65-8648-B8A682156078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakkaBP", "DakkaBP\DakkaBP.csproj", "{3D78AB71-DB04-49F3-9B94-C161998775DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakkaWeb", "DakkaWeb\DakkaWeb.csproj", "{251CBE5B-9D2B-43B9-A232-4291526A1764}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF620379-268D-4E65-8648-B8A682156078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF620379-268D-4E65-8648-B8A682156078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF620379-268D-4E65-8648-B8A682156078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF620379-268D-4E65-8648-B8A682156078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D78AB71-DB04-49F3-9B94-C161998775DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D78AB71-DB04-49F3-9B94-C161998775DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D78AB71-DB04-49F3-9B94-C161998775DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D78AB71-DB04-49F3-9B94-C161998775DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251CBE5B-9D2B-43B9-A232-4291526A1764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251CBE5B-9D2B-43B9-A232-4291526A1764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251CBE5B-9D2B-43B9-A232-4291526A1764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251CBE5B-9D2B-43B9-A232-4291526A1764}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

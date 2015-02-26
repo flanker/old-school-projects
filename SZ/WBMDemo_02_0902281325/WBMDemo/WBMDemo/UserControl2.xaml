@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WBMDemo.UserControl2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="440">
+    <Grid>
+        <Label HorizontalAlignment="Left" Name="label10" Width="48" FlowDirection="LeftToRight" FontSize="20">
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="DarkGray" FontSize="25" Width="35" Text="2.数据填写" HorizontalAlignment="Left" Margin="-2.009,81.453,0,-2.981"> </TextBlock>
+        </Label>
+        <Label Margin="60.751,11.535,0,0" Name="label4" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Width="135.476">BASIC OPTG WT</Label>
+        <TextBox Margin="178.408,13.842,204.554,0" Name="textBox1" Height="23" VerticalAlignment="Top" FlowDirection="RightToLeft">43981</TextBox>
+        <Label HorizontalAlignment="Left" Margin="60.751,39.526,0,0" Name="label7" Width="108.429" Height="28" VerticalAlignment="Top">CORRECTIONS</Label>
+        <TextBox Margin="0,41.526,204.554,0" Name="textBox4" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Width="56.906" FlowDirection="RightToLeft">160</TextBox>
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,11.535,114.581,0" Name="label8" VerticalAlignment="Top" Width="64">DOI</Label>
+        <TextBox Height="23" Margin="0,13.535,73.055,0" Name="textBox5" VerticalAlignment="Top" FlowDirection="RightToLeft" HorizontalAlignment="Right" Width="57.038">53.96</TextBox>
+        <Label HorizontalAlignment="Left" Margin="60.751,103.046,0,0" Name="label9" Width="99.201" Height="28" VerticalAlignment="Top">TAKE-OFF FUEL</Label>
+        <TextBox Margin="178.408,104.584,204.554,0" Name="textBox6" Height="23" VerticalAlignment="Top" FlowDirection="RightToLeft">8586</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="60.751,130.73,0,0" Name="label1" VerticalAlignment="Top" Width="99.201">TRIP FUEL</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" Margin="178.408,133.037,204.554,0" Name="textBox2" VerticalAlignment="Top">4060</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="60.751,0,0,157.645" Name="label2" VerticalAlignment="Bottom" Width="63.827">CARGO1</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" Margin="0,0,264.536,160.721" Name="textBox3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="44.47">1244</TextBox>
+        <Label HorizontalAlignment="Left" Margin="60.751,0,0,129.961" Name="label3" Width="63.827" Height="27.804" VerticalAlignment="Bottom">CARGO3</Label>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="130.73,0,0,133.037" Name="textBox7" Width="44.47" Height="22.421" VerticalAlignment="Bottom">1229</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="60.751,0,0,102.277" Name="label5" VerticalAlignment="Bottom" Width="63.827">CARGO4</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" HorizontalAlignment="Left" Margin="130.73,0,0,105.353" Name="textBox8" VerticalAlignment="Bottom" Width="44.47">625</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="60.751,0,0,73.824" Name="label6" VerticalAlignment="Bottom" Width="63.827">CARGO5</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" HorizontalAlignment="Left" Margin="130.73,0,0,76.9" Name="textBox9" VerticalAlignment="Bottom" Width="44.47">5</TextBox>
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,0,114.754,157.645" Name="label11" VerticalAlignment="Bottom" Width="63.827">PSG OA</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" HorizontalAlignment="Right" Margin="0,0,64,160.721" Name="textBox10" VerticalAlignment="Bottom" Width="44.47">1</TextBox>
+        <Label HorizontalAlignment="Right" Margin="0,0,114.754,129.192" Name="label12" Width="63.827" Height="28" VerticalAlignment="Bottom">PSG OB</Label>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Right" Margin="0,0,64,132.268" Name="textBox11" Width="44.47" Height="23" VerticalAlignment="Bottom">61</TextBox>
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,0,114.754,101.508" Name="label13" VerticalAlignment="Bottom" Width="63.827">PSG OC</Label>
+        <TextBox FlowDirection="RightToLeft" Height="23" HorizontalAlignment="Right" Margin="0,0,64,104.584" Name="textBox12" VerticalAlignment="Bottom" Width="44.47">72</TextBox>
+        <Button Height="23" HorizontalAlignment="Left" Margin="84.952,0,0,43.064" Name="button1" VerticalAlignment="Bottom" Width="84.228" Foreground="Red">未填写装载单</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,73.055,73.824" Name="button2" VerticalAlignment="Bottom" Width="82.69" Foreground="Green">已填写座位图</Button>
+    </Grid>
+</UserControl>

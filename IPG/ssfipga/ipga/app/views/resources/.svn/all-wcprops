@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/74/trunk/ipga/app/views/resources
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/38/trunk/ipga/app/views/resources/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/51/trunk/ipga/app/views/resources/index.html.erb
+END
+mine.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/84/trunk/ipga/app/views/resources/mine.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/64/trunk/ipga/app/views/resources/new.html.erb
+END
+_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/84/trunk/ipga/app/views/resources/_list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/74/trunk/ipga/app/views/resources/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/64/trunk/ipga/app/views/resources/_form.html.erb
+END

@@ -1,0 +1,22 @@
+﻿<h1>Infinite Positive Group</h1>
+<p>As you can see, we are creating a JsonResult object at the beginning of the method.
+    JsonResult is a simple class which has only two properties: isSuccessful and errorMessage,
+    which denotes if the controller action was successful. If the operation is not successful,
+    it populates the errorMessage with the proper reason. In the end, we are passing
+    the result as view data of the shared view called "Json". Since this is a shared
+    view and it will be used by both UserController and StoryController, we have placed
+    it in the Shared folder under the Views. I am excluding the other methods of this
+    controller as they work almost the same as this. One important thing I would like
+    to mention is that instead of using the static Membership class directly in the
+    code, we are passing the abstract membership provider in the constructor of this
+    controller. The reason behind this is that we can pass a Mock Membership Provider
+    in our Unit Test, which we will check next. And in the other constructor, we are
+    passing the default membership provider, which is configured in the web.config.
+</p>
+<p>In this part, we took a brief overview of the ASP.NET MVC Framework and learned how
+    to assign functionality to controllers, how to define the routing rules and test
+    them against URLs. We have also seen how to create a Controller that returns JSON
+    data instead of regular HTML, and tested the controller. In the next part, we will
+    talk more about the Controller, which renders regular HTML view, using master pages
+    and user controls to create the view, passing strongly typed view data to the view
+    and finally creating the Model. Stay tuned. </p>

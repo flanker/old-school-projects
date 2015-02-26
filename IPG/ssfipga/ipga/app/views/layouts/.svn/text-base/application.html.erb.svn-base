@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <title>Resources: <%= controller.action_name %></title>
+  <%= render :partial => 'shared/stylesheets' %>
+  <%= render :partial => 'shared/javascripts' %>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div id="topnav">
+      <span>
+        <%= logged_in? ? "Hi, " + current_user.username + " " + link_to("Logout", :controller => 'account', :action => 'logout') :
+                "Please " +  link_to("Login", :controller => 'account', :action => 'login') %>
+        | <a href="#">Contact</a> | <a href="#">About</a></span> | <%= language_selection %>
+    </div>
+    <h1>Infinite Positive Alliance</h1>
+    <!--<span>A next generation venture incubator, think center and conglomerate company</span>-->
+    <!--begin: #mainNav-->
+    <div id="mainNav">
+      <ul>
+        <li><%= link_to t('navigation.home'), resources_path %></li>
+        <li><%= link_to t('navigation.inbox'), requests_path %></li>
+        <li><%= link_to t('navigation.account'), mine_resources_path %></li>
+        <li><%= link_to t('navigation.search'), resources_path %></li>
+        <li id="searchArea">
+          <form method="get" action="#">
+            <input class="searchBox" type="text" value="<%= t(:search_here) %>"/>
+            <input class="searchButton" type="submit" value="search"/>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!--end: #mainNav-->
+  </div>
+  <div class="page_margins">
+    <div id="main">
+      <!-- begin: #col1 - first float column -->
+      <div id="col1">
+        <div id="col1_content" class="clearfix">
+          <div id="inbox">
+            <p class="blockHeader">Inbox</p>
+
+            <p><%= (link_to "unread message: " + current_user.unread_messages.length.to_s, requests_path) if logged_in? %></p>
+          </div>
+        </div>
+      </div>
+      <!-- end: #col1 -->
+      <!-- begin: #col2 - second float column -->
+      <div id="col2">
+        <div id="col2_content" class="clearfix">
+          <div id="content">
+            <p style="color: green"><%= flash[:notice] %></p>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <!-- end: #col2 -->
+      <!-- begin: #col3 - third float column -->
+      <div id="col3">
+        <div id="col3_content" class="clearfix">
+          <div id="shopCart">
+            <p class="blockHeader">Resource Cart</p>
+
+            <p id="cartTooltip">drag resources here.</p>
+            <ul id="favorite">
+              <%= render(:partial => 'shared/favorite', :locals => {:favorite => current_user.favorite}) if logged_in? %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end: #col3 -->
+      <div class="clearBoth"></div>
+    </div>
+    <!-- end: #main -->
+  </div>
+  <!--end: #page_margins-->
+  <!-- begin: #footer -->
+  <div id="footer">
+    <div>Copyright &copy; 2009 Infinite Positive Group. All rights reserved.</div>
+    <ul id="nav-legal">
+      <li>
+        <a href="#">User Agreement</a>
+      </li>
+      <li>
+        <a href="#">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="#">Copyright Policy</a>
+        p
+      </li>
+    </ul>
+    <div id="feedback-request">
+      <a href="/#">Help improve us. </a>Send us your feedback.
+    </div>
+  </div>
+  <!-- end: #footer -->
+</div>
+<!--end: #page-->
+</body>
+</html>

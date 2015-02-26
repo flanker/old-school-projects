@@ -1,0 +1,102 @@
+﻿html, body
+{
+	font: normal 12px verdana;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+p
+{
+	margin: 5px;
+}
+#north h1
+{
+	padding: 5px;
+	float: left;
+}
+#north p
+{
+	padding: 5px;
+	float: right;
+}
+#south p
+{
+	text-align: center;
+}
+.navLink ul
+{
+	padding-left: 10px;
+}
+.navLink ul li
+{
+	padding-top: 2px;
+	width: 80%;
+}
+
+.navLink ul li a:link, .navLink ul li a:visited
+{
+	padding: 2px;
+	display: block;
+	height: 18px;
+	text-decoration: none;
+	text-align: left;
+	text-indent: 20px;
+	color: Black;
+	background-image: url(../Content/Images/leaf.gif);
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	border: 1px none #8db2e3;
+}
+.navLink ul li a:hover, .navLink ul li a:active
+{
+	background-color: #deecfd;
+	border: 1px dotted #8db2e3;
+}
+.navLink ul li a .selected
+{
+	background-color: #deecfd;
+	border: 1px dotted #8db2e3;
+}
+/************ Ext.flanker.msg ***********/
+#msg-div
+{
+	position: absolute;
+	width: 250px;
+	z-index: 20000;
+}
+
+/************ icon class ***********/
+.settings
+{
+	background-image: url(../Content/Images/folder_wrench.png) !important;
+}
+.nav
+{
+	background-image: url(../Content/Images/folder_go.png) !important;
+}
+.add
+{
+	background-image: url(../Content/Images/add.gif) !important;
+}
+.option
+{
+	background-image: url(../Content/Images/plugin.gif) !important;
+}
+.remove
+{
+	background-image: url(../Content/Images/delete.gif) !important;
+}
+.edit
+{
+	background-image: url(../Content/Images/edit.png) !important;
+}
+.save
+{
+	background-image: url(../Content/Images/save.gif) !important;
+}
+.refresh
+{
+	background-image: url(../Content/Images/table_refresh.png) !important;
+}

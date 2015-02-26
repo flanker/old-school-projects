@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/75/trunk/ipga/db/migrate
+END
+20090625120514_change_resources.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/13/trunk/ipga/db/migrate/20090625120514_change_resources.rb
+END
+20090701135324_create_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/28/trunk/ipga/db/migrate/20090701135324_create_request.rb
+END
+20090729130544_change_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/77/trunk/ipga/db/migrate/20090729130544_change_messages.rb
+END
+20090719064840_create_favorites.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/66/trunk/ipga/db/migrate/20090719064840_create_favorites.rb
+END
+20090808161517_add_receiver_to_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/80/trunk/ipga/db/migrate/20090808161517_add_receiver_to_messages.rb
+END
+20090712060043_add_friendly_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/45/trunk/ipga/db/migrate/20090712060043_add_friendly_name.rb
+END
+20090726135036_add_sender_to_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/75/trunk/ipga/db/migrate/20090726135036_add_sender_to_messages.rb
+END
+20090621033534_create_resources.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/ipga/db/migrate/20090621033534_create_resources.rb
+END
+20090712092634_create_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/52/trunk/ipga/db/migrate/20090712092634_create_messages.rb
+END
+20090706013449_i18n_for_locations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/39/trunk/ipga/db/migrate/20090706013449_i18n_for_locations.rb
+END
+20090621083614_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/6/trunk/ipga/db/migrate/20090621083614_create_users.rb
+END
+20090705141712_add_locale_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/39/trunk/ipga/db/migrate/20090705141712_add_locale_to_users.rb
+END
+20090630153957_add_user_to_resource.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/27/trunk/ipga/db/migrate/20090630153957_add_user_to_resource.rb
+END
+20090702142902_change_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/31/trunk/ipga/db/migrate/20090702142902_change_request.rb
+END
+20090808084709_change_read_to_readed_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/79/trunk/ipga/db/migrate/20090808084709_change_read_to_readed_messages.rb
+END

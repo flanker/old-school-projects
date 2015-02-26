@@ -1,0 +1,59 @@
+﻿#hotSpots
+{
+	min-height: 360px;
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+.hotSpot
+{
+	position: absolute;
+}
+/* begin: hot spot title*/
+.hotSpotTitle
+{
+	/* position: absolute;*/
+	z-index: 4;
+	width: 39px;
+	height: 39px;
+	padding: 50px;
+}
+.hotSpotTitle > div
+{
+	background: #000000 none repeat scroll 0 0;
+	padding: 1px;
+	width: 39px;
+	cursor: default;
+}
+.hotSpotTitle > div > div
+{
+	border: 1px solid #FFFFFF;
+	height: 37px;
+	width: 37px;
+}
+/* end: hot spot title*/
+/* begin: hot spot content*/
+.hotSpotContent
+{
+	cursor: pointer;
+	display: block;
+	line-height: 1.4em;
+	position: absolute;
+	width: 205px;
+	z-index: 15;
+	left: 90px;
+	top: 50px;
+	text-align: left;
+}
+.hotSpotContent > div
+{
+	background: #000000 none repeat scroll 0 0;
+	padding: 1px;
+}
+.hotSpotContent p
+{
+	border: 1px solid #FFFFFF;
+	padding: 3px 8px 6px;
+	margin: 0;
+}
+/* end: hot spot content*/

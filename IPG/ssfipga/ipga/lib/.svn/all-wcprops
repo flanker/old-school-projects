@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/74/trunk/ipga/lib
+END
+data_loader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/74/trunk/ipga/lib/data_loader.rb
+END
+authenticated_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/9/trunk/ipga/lib/authenticated_test_helper.rb
+END
+locales_switch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/41/trunk/ipga/lib/locales_switch.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/9/trunk/ipga/lib/authenticated_system.rb
+END

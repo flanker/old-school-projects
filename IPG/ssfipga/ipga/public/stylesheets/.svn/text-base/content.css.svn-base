@@ -1,0 +1,370 @@
+#content {
+    width: 580px;
+}
+
+#content h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-family: Arial, sans-serif;
+}
+
+#content h3 {
+    font-size: 150%;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0 10px;
+}
+
+#content:first-child {
+    padding-top: 0px;
+}
+
+#content .topDiv {
+    margin-bottom: 10px;
+}
+
+/*begin: list*/
+#content div.list {
+    width: 580px;
+}
+
+#content div.listHeader {
+    background: url(../images/listHeader.gif) repeat-x left top;
+    height: 24px;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+#content div.listItem {
+    clear: both;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #FFFFFF;
+    position: relative;
+    width: 580px;
+}
+
+#content div.listItem:hover {
+    background-color: #FAFAFA !important;
+    cursor: pointer;
+}
+
+#content .listColumn {
+    float: left;
+    width: 90px;
+    text-align: center;
+}
+
+#content .listColumnLast {
+    float: left;
+    width: 200px;
+    text-align: left;
+}
+
+#content .listItem .unread {
+    font-weight: bold;
+}
+
+#content .listItem {
+    height: 55px;
+    line-height: 2em;
+}
+
+#content .listItem .listRate {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#content .listItem .listTools {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+#content .listItem .listTools a {
+    background: no-repeat left top;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -9999px;
+    *line-height: 0px; /*ie*/
+    *text-indent: 0px; /*ie*/
+}
+
+#content .listItem .listTools a:hover {
+    background: no-repeat left bottom;
+}
+
+#content .listItem .listTools a.show {
+    background-image: url(../images/button/detail.png);
+}
+
+#content .listItem .listTools a.edit {
+    background-image: url(../images/button/edit.png);
+}
+
+#content .listItem .listTools a.destroy {
+    background-image: url(../images/button/delete.png);
+}
+
+#content .listItem .listTools a.request {
+    background-image: url(../images/button/email.png);
+}
+
+#content .listItem .listTools a.cartAdd {
+    background-image: url(../images/button/cart_add.png);
+}
+
+#content .onDragging {
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    background-color: #F5F5F5;
+    border: 1px solid #CECECE;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+/*end: list*/
+/*begin: search*/
+#searchBox {
+    background: url(../images/SearchBg.gif);
+    border: solid 1px #dddddd;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#searchBox div.searchBlock {
+    margin: 10px 10px;
+}
+
+#basicSearch {
+    position: relative;
+    padding-left: 25px;
+}
+
+/*begin: hacked for ie, text input & submit in one line verical-align problem*/
+#basicSearch .buttonSubmit {
+    *top: 5px;
+    *position: relative;
+}
+
+#basicSearch .buttonSubmitHovered {
+    *top: 5px;
+    *position: relative;
+}
+
+/*end: hacked for id*/
+
+#advancedSearch {
+    display: none;
+}
+
+#advancedSearch > p {
+    float: left;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+#advancedButton {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+/*end: search*/
+/*begin: navigation*/
+#navigation {
+    margin: 10px;
+    border: solid 1px #666666;
+    position: relative;
+    height: 320px;
+    background-color: #cfcfcf;
+}
+
+#navigation div {
+    top: 5px;
+    left: 5px;
+    background-color: #efefef;
+    height: 98px;
+    min-height: 98px;
+    border: solid 1px #666666;
+    text-align: center;
+    line-height: 98px;
+    position: absolute;
+    width: 546px;
+}
+
+#navigation div:hover {
+/*background-color: #cfcfcf;*/
+    cursor: pointer;
+}
+
+#navigation a.nav {
+    background-color: #efefef;
+    width: 186px;
+    display: inline-block;
+    border: solid 1px #666666;
+    border-right: none;
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    outline: none;
+}
+
+#navigation a.nav:hover {
+    background-color: #cfcfcf;
+    text-decoration: none;
+}
+
+#navigation a.selected {
+    border-top: none;
+    background-color: #cfcfcf;
+}
+
+#navigation a.selected:hover {
+    background-color: #cfcfcf;
+}
+
+#returnLink {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+#returnLink:hover {
+    cursor: pointer;
+}
+
+/*end: navigation*/
+/*begin: #requestOverlay*/
+#requestOverlay {
+    display: none;
+}
+
+#requestOverlay div {
+    background-color: #ffffff;
+    color: #000000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 20px;
+}
+
+#requestOverlay div h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    margin-bottom: 25px;
+}
+
+#requestOverlay input {
+    background: #DFDFDF none repeat scroll 0 0;
+    border: 1px solid #aaaaaa;
+    width: 260px;
+    line-height: 20px;
+    height: 20px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+#requestOverlay input[type="button"] {
+    width: 80px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+#requestOverlay input[type="button"]:hover {
+    width: 80px;
+    background-color: #EFEFEF;
+    cursor: pointer;
+    border: 1px solid #ff9900;
+}
+
+/*end: #requestOverlay*/
+/*begin: messages*/
+#messagesTitle {
+    background: transparent url(../images/messages-top.gif) no-repeat scroll left bottom;
+}
+
+#messagesWrap {
+    background: transparent url(../images/messages-bottom.gif) no-repeat scroll left bottom;
+    padding-bottom: 5px;
+    width: 504px;
+}
+
+#messagesWrap ul {
+    background: transparent url(../images/messages-body-bg.gif) repeat-y scroll 0 0;
+    line-height: 160%;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 13px 0;
+}
+
+#messagesWrap ul li {
+    background-image: none;
+    clear: both;
+    margin: 0;
+    min-height: 70px;
+    overflow: hidden;
+    padding: 0;
+}
+
+#messages .sender {
+    background: transparent url(../images/messages-avatar-bg.gif) no-repeat scroll 0 0;
+    float: left;
+    height: 56px;
+    margin-top: 5px;
+    padding: 16px 0 0 8px;
+    width: 56px;
+}
+
+#messages .title {
+    background: transparent url(../images/messages-entry-top.gif) no-repeat scroll 0 0;
+    float: right;
+    margin: 0;
+    padding: 7px 15px 2px;
+    position: relative;
+    width: 380px;
+    font-size: 110%;
+    font-style: normal;
+}
+
+#messages .body {
+    background: transparent url(../images/messages-entry-middle.gif) repeat-y scroll 0 0;
+    float: right;
+    margin: 0;
+    padding: 5px 15px 2px;
+    position: relative;
+    width: 380px;
+}
+
+#messages .sendTime {
+    background: transparent url(../images/messages-entry-bottom.gif) no-repeat scroll 0 0;
+    color: #777777;
+    float: right;
+    font-size: 85%;
+    margin: 0 0 10px;
+    padding: 7px 5px 0 0;
+    position: relative;
+    text-align: right;
+    width: 405px;
+}
+
+#messages .unread {
+    font-weight: bold;
+}
+
+/*end: messages*/

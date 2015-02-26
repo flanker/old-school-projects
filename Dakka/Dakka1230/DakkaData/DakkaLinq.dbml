@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Test" Class="DakkaLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Test;Persist Security Info=True;User ID=sa" SettingsObjectName="DakkaData.Properties.Settings" SettingsPropertyName="TestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee" Member="Employee">
+    <Type Name="Employee">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Dept" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Employee_WorkRecord" Member="WorkRecord" ThisKey="ID" OtherKey="Employee" Type="WorkRecord" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkRecord" Member="WorkRecord">
+    <Type Name="WorkRecord">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Employee" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="WorkPoint" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PointType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="Employee_WorkRecord" Member="Employee1" ThisKey="Employee" OtherKey="ID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShiftDef" Member="ShiftDef">
+    <Type Name="ShiftDef">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ShiftType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FromTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WorkingHours" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="ShiftDef_ShiftPoint" Member="ShiftPoint" ThisKey="ID" OtherKey="ShiftDef" Type="ShiftPoint" />
+      <Association Name="ShiftDef_WorkCalendarRule" Member="WorkCalendarRule" ThisKey="ID" OtherKey="ShiftDef" Type="WorkCalendarRule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShiftPoint" Member="ShiftPoint">
+    <Type Name="ShiftPoint">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IndexNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Before" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="After" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PointType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ShiftDef" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="ShiftDef_ShiftPoint" Member="ShiftDef1" ThisKey="ShiftDef" OtherKey="ID" Type="ShiftDef" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkCalendar" Member="WorkCalendar">
+    <Type Name="WorkCalendar">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="WorkCalendar_WorkCalendarRule" Member="WorkCalendarRule" ThisKey="ID" OtherKey="WrokCalendar" Type="WorkCalendarRule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkCalendarRule" Member="WorkCalendarRule">
+    <Type Name="WorkCalendarRule">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RuleType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RuleValue" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Week" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Day" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsWorkDay" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WrokCalendar" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftDef" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="ShiftDef_WorkCalendarRule" Member="ShiftDef1" ThisKey="ShiftDef" OtherKey="ID" Type="ShiftDef" IsForeignKey="true" />
+      <Association Name="WorkCalendar_WorkCalendarRule" Member="WorkCalendar" ThisKey="WrokCalendar" OtherKey="ID" Type="WorkCalendar" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

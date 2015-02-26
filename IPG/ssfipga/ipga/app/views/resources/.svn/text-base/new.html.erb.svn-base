@@ -1,0 +1,5 @@
+<h1><%= t(:new_resource) %></h1>
+
+<%= render :partial => 'form', :locals => {:record => @resource} %>
+
+<%= link_to_span 'Back', resources_path, :class => 'linkButton' %>

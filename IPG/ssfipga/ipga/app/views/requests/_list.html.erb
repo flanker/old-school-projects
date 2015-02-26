@@ -1,0 +1,17 @@
+<% if messages.blank? %>
+    <%= t('no_message') %>
+<% else %>
+    <h3 id="messagesTitle">Messages</h3>
+    <div id="messagesWrap">
+      <ul>
+        <% messages.each do |message| %>
+            <li class="messageItem">
+              <div class="sender"><%= h display_name_by_id(message.request, message.sender_id) %></div>
+              <div class="title <%= display_unread_message message %>"><%= h message.title %></div>
+              <div class="body <%= display_unread_message message %>"><%= h message.body %></div>
+              <div class="sendTime"><span><%= h l(message.created_at, :format => :long) %></span></div>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

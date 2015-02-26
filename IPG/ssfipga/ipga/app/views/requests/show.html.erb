@@ -1,0 +1,38 @@
+<h3>Request Basic Info</h3>
+<p>
+  <b>Sender:</b>
+  <%= h display_name(@request, :sender) %>
+</p>
+
+<p>
+  <b>Receiver:</b>
+  <%= h display_name(@request, :receiver) %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= h l(@request.created_at, :format => :long) %>
+</p>
+
+<div id="messages">
+  <%= render :partial => 'list', :locals => {:messages => @request.messages.sort_by(&:created_at).reverse, :message => @message } %>
+</div>
+
+<h3><%= t :reply_message %></h3>
+<% remote_form_for(@message, :url => { :action => 'reply' }, :html => { :class => 'niceform' }, :update => 'messages') do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %><br/>
+      <%= f.text_area :body, :size => "30x8" %>
+    </p>
+    <%= f.hidden_field :request_id %>
+    <p>
+      <%= f.submit "Reply" %>
+    </p>
+<% end %>
+
+<%= link_to_span 'Back', requests_path, :class => 'linkButton' %>

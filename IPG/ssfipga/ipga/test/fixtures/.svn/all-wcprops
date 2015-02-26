@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/75/trunk/ipga/test/fixtures
+END
+departments.csv
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/14/trunk/ipga/test/fixtures/departments.csv
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/75/trunk/ipga/test/fixtures/users.yml
+END
+industries.csv
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/14/trunk/ipga/test/fixtures/industries.csv
+END
+levels.csv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/14/trunk/ipga/test/fixtures/levels.csv
+END
+locations.csv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/39/trunk/ipga/test/fixtures/locations.csv
+END
+friendly_names.csv
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/61/trunk/ipga/test/fixtures/friendly_names.csv
+END
+official_grades.csv
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/14/trunk/ipga/test/fixtures/official_grades.csv
+END
+strengths.csv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/14/trunk/ipga/test/fixtures/strengths.csv
+END
+favorites.csv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/77/trunk/ipga/test/fixtures/favorites.csv
+END

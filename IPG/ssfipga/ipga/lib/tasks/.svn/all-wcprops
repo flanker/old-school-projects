@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/70/trunk/ipga/lib/tasks
+END
+db.rake
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/33/trunk/ipga/lib/tasks/db.rake
+END
+signup.rake
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/70/trunk/ipga/lib/tasks/signup.rake
+END
+rspec.rake
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/33/trunk/ipga/lib/tasks/rspec.rake
+END

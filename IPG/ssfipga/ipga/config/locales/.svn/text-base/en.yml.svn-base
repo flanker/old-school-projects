@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  this_file_language: English
+  navigation:
+    home: Home
+    inbox: Inbox
+    account: Account
+    search: Search
+  no_resource: No resource
+  no_message: No message
+  can_not_request_self: "Sorry, you can not request yourself."
+  search_here:  "search here..."
+  title: Title
+  body: Body
+  send_request_message: Send request message
+  reply_message: Reply message

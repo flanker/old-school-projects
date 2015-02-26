@@ -1,0 +1,52 @@
+<% if resources.blank? %>
+    <%= t('no_resource') %>
+<% else %>
+    <div class="list">
+      <div class="listHeader">
+        <div class="listColumn">Location</div>
+        <div class="listColumn">Industry</div>
+        <div class="listColumn">Level</div>
+        <div class="listColumn">Official grade</div>
+        <div class="listColumn">Department</div>
+        <div class="listColumn">Created at</div>
+      </div>
+      <% resources.each do |resource| %>
+          <div class="listItem" onclick="window.location.href='<%= resource_path(resource) %>';">
+            <div class="listColumn location"><%= h resource.location.name %></div>
+            <div class="listColumn industry"><%= h resource.industry.name %></div>
+            <div class="listColumn level"><%= h resource.level.name %></div>
+            <div class="listColumn official_grade"><%= h resource.official_grade.name %></div>
+            <div class="listColumn department"><%= h resource.department.name %></div>
+            <div class="listColumn create_at"><%= h resource.created_at.strftime("%Y-%m-%d") %></div>
+            <div class="listRate"><%= image_tag 'stars/star' + resource.strength.rank.to_s + '.gif' %></div>
+            <div class="listTools">
+              <%= link_to('edit', edit_resource_path(resource), :class => "edit", :title => "edit") if is_mine %>
+              <%= link_to('destroy', resource, :confirm => 'Are you sure?', :method => :delete, :class => "destroy", :title => "destroy") if is_mine %>
+              <%= link_to("request", new_message_path(:resource_id => resource.id), :class => "request", :title => "request") unless is_mine %>
+              <%= link_to_remote("add to cart", :url => { :controller => "favorites_resources", :action => "create", :resource_id => resource.id }, :html => { :class => 'cartAdd', :title => 'add to cart' }, :update => 'favorite', :success => 'add_to_cart_seccess();') unless is_mine %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+<% end %>
+<div class="digg_pagination">
+  <div clas="page_info">
+    <%= page_entries_info resources %>
+  </div>
+  <%= will_paginate resources, :container => false, :renderer => "RemoteLinkRenderer", :remote => {:update => 'results'} unless is_mine %>
+  <%= will_paginate resources, :container => false if is_mine %>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // set tooltip
+        $(".listTools a").tooltip({
+            showURL: false
+        });
+        // 斑马线
+        $('#content .listItem:even').css('background-color', '#F5F5F5');
+        $('.listTools a').click(function(event) {
+            event.stopPropagation();
+        });
+    });
+</script>

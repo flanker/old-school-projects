@@ -1,0 +1,14 @@
+<%= javascript_include_tag :all %>
+<script type="text/javascript">
+    var GB_ROOT_DIR = '/greybox/';
+</script>
+<%= javascript_dir_include_tag '/greybox' %>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.NiceJForms.build();
+    });
+    // add_to_cart ajax request seccess callback
+    var add_to_cart_seccess = function() {
+        $('#favorite li:last').highlight();
+    }
+</script>

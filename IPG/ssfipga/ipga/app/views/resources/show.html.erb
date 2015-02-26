@@ -1,0 +1,53 @@
+<p>
+  <b>Location:</b>
+  <%= h @resource.location.name %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= h @resource.industry.name %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= h @resource.level.name %>
+</p>
+
+<p>
+  <b>Official Grade:</b>
+  <%= h @resource.official_grade.name %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= h @resource.department.name %>
+</p>
+
+<p>
+  <b>strength:</b>
+  <!--<%= h @resource.strength.rank %>-->
+  <%= image_tag 'stars/star' + @resource.strength.rank.to_s + '.gif' %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= h @resource.description %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= h @resource.created_at.strftime("%Y-%m-%d") %>
+</p>
+
+
+<%= (link_to_span 'Edit', edit_resource_path(@resource), :class => 'linkButton') if @is_mine %>
+<%= (link_to_remote_span("Add to cart", :url => { :controller => "favorites_resources", :action => "create", :resource_id => @resource.id }, :html => { :class => 'linkButton', :title => 'Add to cart' }, :update => 'favorite', :success => 'add_to_cart_seccess();')) unless @is_mine %>
+<%= (link_to_span "Request", new_message_path(:resource_id => @resource.id), :class => "linkButton request", :title => "Request") unless @is_mine %>
+<%= link_to_span 'Back', resources_path, :class => 'linkButton' %>
+
+<script type=text/javascript>
+    // set request button
+    $('.request').click(function() {
+        return GB_showCenter('Send request', this.href)
+    });
+</script>

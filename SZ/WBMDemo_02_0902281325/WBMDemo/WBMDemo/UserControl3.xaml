@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="WBMDemo.UserControl3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="440">
+    <Grid>
+        <Label HorizontalAlignment="Left" Name="label10" Width="48" FlowDirection="LeftToRight" FontSize="20">
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="DarkGray" FontSize="25" Width="35" Text="3.计算结果" HorizontalAlignment="Left" Margin="-2.009,81.453,0,-2.981"> </TextBlock>
+        </Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="90,44.705,0,0" Name="label1" VerticalAlignment="Top" Width="61">选择机型</Label>
+        <ComboBox Height="23" Margin="165.335,46.705,152.262,0" Name="comboBox1" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True">AirBus A320</ComboBoxItem>
+            <ComboBoxItem>AirBus A319</ComboBoxItem>
+            <ComboBoxItem>Bowing 747-800</ComboBoxItem>
+        </ComboBox>
+        <Label Height="28" Margin="90,126.468,0,0" Name="label6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="64.173">起飞时间</Label>
+        <TextBox Height="23" Margin="165.335,100.209,193.788,0" Name="textBox3" VerticalAlignment="Top">22FEB09</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="90,95.209,0,0" Name="label5" VerticalAlignment="Top" Width="61">起飞日期</Label>
+        <TextBox Height="23" Margin="165.335,131.468,193.788,0" Name="textBox2" VerticalAlignment="Top">0822</TextBox>
+        <Label HorizontalAlignment="Left" Margin="90,164.335,0,0" Name="label2" Width="41" Height="29.889" VerticalAlignment="Top">From</Label>
+        <ComboBox Margin="165.335,166.335,0,0" Name="comboBox2" HorizontalAlignment="Left" Width="48.454" Height="24.173" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True">XIY</ComboBoxItem>
+        </ComboBox>
+        <Label Margin="90,192.56,0,182.912" Name="label3" HorizontalAlignment="Left" Width="32.735">To</Label>
+        <ComboBox Margin="165.335,192.56,0,182.912" Name="comboBox3" HorizontalAlignment="Left" Width="49.003">
+            <ComboBoxItem IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem>PEK</ComboBoxItem>
+        </ComboBox>
+        <Label HorizontalAlignment="Left" Margin="90,0,0,148.616" Name="label4" Width="58" Height="28" VerticalAlignment="Bottom">FLIGHT</Label>
+        <TextBox Margin="165.335,0,152.262,148.616" Name="textBox1" Height="23" VerticalAlignment="Bottom">MU2123/22FEB09</TextBox>
+        <Label HorizontalAlignment="Left" Margin="90,0,0,111.462" Name="label7" Width="64" Height="28" VerticalAlignment="Bottom">A/C REG</Label>
+        <TextBox Margin="165.335,0,195.326,111.462" Name="textBox4" Height="23" VerticalAlignment="Bottom">B60295</TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="90,0,0,76.043" Name="label8" VerticalAlignment="Bottom" Width="64">VERSION</Label>
+        <TextBox Height="23" Margin="165.335,0,193.788,81.043" Name="textBox5" VerticalAlignment="Bottom">F8Y150</TextBox>
+        <Label HorizontalAlignment="Left" Margin="90,0,0,42.87" Name="label9" Width="45" Height="28" VerticalAlignment="Bottom">CREW</Label>
+        <TextBox Margin="165.335,0,193.788,47.87" Name="textBox6" Height="23" VerticalAlignment="Bottom">3/7/0</TextBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/60/trunk/ipga/spec
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/9/trunk/ipga/spec/spec_helper.rb
+END
+rcov.opts
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/ipga/spec/rcov.opts
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/ipga/spec/spec.opts
+END
